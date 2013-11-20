@@ -43,7 +43,6 @@ DROP TABLE IF EXISTS Artist;
 CREATE TABLE Artist(
   id INT PRIMARY KEY,
   name VARCHAR(255),
-  albumID INT
 );
 
 DROP TABLE IF EXISTS Genre;
@@ -68,4 +67,4 @@ INSERT INTO Song VALUES(2808, 'Let the Groove Get In', 300, 2, 300, 2013)
 INSERT INTO Song VALUES(2809, 'Mirrors', 300, 2, 300, 2013)
 INSERT INTO Song VALUES(2810, 'Blue Ocean Roar', 300, 2, 300, 2013)
 
-INSERT INTO Artist VALUES(300, 'Justin Timberlake', 300)
+INSERT INTO Artist VALUES(300, 'Justin Timberlake')
