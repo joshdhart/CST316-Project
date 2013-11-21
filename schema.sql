@@ -54,23 +54,23 @@ CREATE TABLE Genre(
 
 /* Genre 2: Pop */
 
-INSERT INTO Genre VALUES(2, 'Pop');
+INSERT INTO Genre VALUES(2, "Pop");
 
-INSERT INTO Album VALUES(300, 'The 20/20 Experience', 300, 2, 2013);
+INSERT INTO Album VALUES(300, "The 20/20 Experience", 300, 2, 2013);
 
 
-INSERT INTO Song VALUES(2801, 'Pusher Love Girl', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2802, 'Suit & Tie feat. Jay-Z', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2803, 'Don�t Hold the Wall', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2804, 'Strawberry Bubblegum', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2805, 'Tunnel Vision', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2806, 'Spaceship Coup', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2807, 'That Girl', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2808, 'Let the Groove Get In', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2809, 'Mirrors', 300, 2, 300, 2013);
-INSERT INTO Song VALUES(2810, 'Blue Ocean Roar', 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2801, "Pusher Love Girl", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2802, "Suit & Tie feat. Jay-Z", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2803, "Don't Hold the Wall", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2804, "Strawberry Bubblegum", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2805, "Tunnel Vision", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2806, "Spaceship Coup", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2807, "That Girl", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2808, "Let the Groove Get In", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2809, "Mirrors", 300, 2, 300, 2013);
+INSERT INTO Song VALUES(2810, "Blue Ocean Roar", 300, 2, 300, 2013);
 
-INSERT INTO Artist VALUES(300, 'Justin Timberlake');
+INSERT INTO Artist VALUES(300, "Justin Timberlake");
 
 
 /* Genre 3: Metal */
