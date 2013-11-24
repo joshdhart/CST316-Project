@@ -54,6 +54,227 @@ CREATE TABLE Genre(
   type VARCHAR(50)
 );
 
+/* Genre 1: Rock */
+
+INSERT INTO Genre VALUES(1, "Rock");
+
+#############  Artists  #############
+INSERT INTO Artist VALUES(100, "Imagine Dragons");
+INSERT INTO Artist VALUES(105, "Arcade Fire");
+INSERT INTO Artist VALUES(110, "Beatles");
+INSERT INTO Artist VALUES(115, "Lorde");
+INSERT INTO Artist VALUES(120, "The Killers");
+INSERT INTO Artist VALUES(125, "Pearl Jam");
+INSERT INTO Artist VALUES(130, "Passenger");
+INSERT INTO Artist VALUES(135, "Avenged Sevenfold");
+INSERT INTO Artist VALUES(140, "Lana Del Rey");
+INSERT INTO Artist VALUES(145, "Linkin Park");
+
+#############  Albums  #############
+INSERT INTO Album VALUES(100, "Night Visions", 100, 1, 2012);
+INSERT INTO Album VALUES(105, "Reflektor", 105, 1, 2013);
+INSERT INTO Album VALUES(110, "On Air: Live At The BBC Volume 2", 110, 1, 2013);
+INSERT INTO Album VALUES(115, "Pure Heroine", 115, 1, 2013);
+INSERT INTO Album VALUES(120, "Direct Hits (Deluxe)", 120, 1, 2013);
+INSERT INTO Album VALUES(125, "Lighting Bolt", 125, 1, 2013);
+INSERT INTO Album VALUES(130, "All the Little Lights", 130, 1, 2012);
+INSERT INTO Album VALUES(135, "Hail to the King", 135, 1, 2013);
+INSERT INTO Album VALUES(140, "Born to Die", 140, 1, 2012);
+INSERT INTO Album VALUES(145, "Recharged", 145, 1, 2013);
+
+#############  Songs  #############
+INSERT INTO Song VALUES(1000, "Radioactive", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1001, "Tiptoe", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1002, "It’s Time", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1003, "Demons", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1004, "On Top of the World", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1005, "Amsterdam", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1006, "Hear Me", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1007, "Every Night" 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1008, "Bleeding Out", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1009, "Underdog", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1010, "Nothing Left to Say / Rocks", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1011, "Working Man", 100, 1, 100, 2012);
+INSERT INTO Song VALUES(1012, "Fallen", 100, 1, 100, 2012);
+
+INSERT INTO Song VALUES(1013, "Reflektor", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1014, "We Exist", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1015, "Flashbulb Eyes", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1016, "Here Comes The Night Time", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1017, "Normal Person", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1018, "You Already Know", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1019, "Joan Of Arc", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1020, "Here Comes The Night Time II", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1021, "Awful Sound (Oh Eurydice)", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1022, "It’s Never Over (Oh Orpheus)", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1023, "Porno", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1024, "Afterlife", 105, 1, 105, 2013);
+INSERT INTO Song VALUES(1025, "Supersymmetry", 105, 1, 105, 2013);
+
+INSERT INTO Song VALUES(1026, "And Here We Go Again (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1027, "Words of Love", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1028, "How About It, Gorgeous? (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1029, "Do You Want to Know a Secret", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1030, "Lucille", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1031, "Hey, Paul… (spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1032, "Anna (Go to Him)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1033, "Hello! (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1034, "Please Please Me", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1035, "Misery", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1036, "I’m Talking About You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1037, "A Real Treat (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1038, "Boys", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1039, "Absolutely Fab (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1040, "Chains", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1041, "Ask Me Why", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1042, "Till There Was You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1043, "Lend ME Your Comb", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1044, "Lower 5E (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1045, "The Hippy Hippy Shake", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1046, "Roll Over Beethoven", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1047, "There;s a Place", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1048, "Bumper Bundle (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1049, "P.S. I Love You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1050, "Please Mister Postman", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1051, "Beautiful Dreamer", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1052, "Devil In Her Heart", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1053, "The 49 Weeks (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1054, "Sure to Fall (In Love With You)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1055, "Never Mind, Eh? (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1056, "Twist and Shout", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1057, "Bye, Bye (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1058, "John - Pop Profile", 110, 1, 110, 1965);
+INSERT INTO Song VALUES(1059, "George - Pop Profile", 110, 1, 110, 1965);
+INSERT INTO Song VALUES(1060, "I Saw Her Standing There", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1061, "Glad All Over", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1062, "Lift Lid Again (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1063, "I’ll Get You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1064, "She Loves You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1065, "Memphis, Tennessee", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1066, "Happy Birthday Dear Saturday Club", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1067, "Now Hush, Hush (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1068, "From Me to You", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1069, "Money (That’s What I Want)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1070, "I Want to Hold Your Hand", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1071, "Brain Bathtubs (Spoken Word)", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1072, "This Boy", 110, 1, 110, 1963);
+INSERT INTO Song VALUES(1073, "If I Wasn’t In America (Spoken Word)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1074, "I Got a Woman", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1075, "Long Tall Sally", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1076, "If I Fell", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1077, "A Hard Job Writing Them (Spoken Word)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1078, "And I Love Her", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1079, "Oh, Can’t We? Yes We Can (Spoken Word)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1080, "Honey Don’t", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1081, "I’ll Follow The Sun", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1082, "Green With Black Shutters (Spoken Word)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1083, "Kansas City / Hey-Hey-Hey-Hey!", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1084, "That’s What We’re Here For (Spoken Word)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1085, "I Feel Fine (Studio Outtake)", 110, 1, 110, 1964);
+INSERT INTO Song VALUES(1086, "Paul - Pop Profile", 110, 1, 110, 1966);
+INSERT INTO Song VALUES(1087, "Ringo - Pop Profile", 110, 1, 110, 1966);
+
+INSERT INTO Song VALUES(1088, "Tennis Court", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1089, "400 Lux", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1090, "Royals", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1091, "Ribs", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1092, "Buzzcut Season", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1093, "Team", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1094, "Glory and Gore", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1095, "Still Sane", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1096, "White Teeth Teens", 115, 1, 115, 2013);
+INSERT INTO Song VALUES(1097, "A World Alone", 115, 1, 115, 2013);
+
+INSERT INTO Song VALUES(1098, "Mr.Brightside", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1099, "Somebody Told Me", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1100, "Smile Like You Mean It", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1101, "All These Things That I’ve Done", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1102, "When You Were Young", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1103, "Read My Mind", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1104, "For Reasons Unknown", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1105, "Human", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1106, "Spaceman", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1107, "A Dustland Fairytale", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1108, "Runaways", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1109, "Miss Atomic Bomb", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1110, "The Way It Was", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1111, "Shot At the Night", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1112, "Just Another Girl", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1113, "Mr. Brightside (Demo)", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1114, "When You Were Young (Calvin Harris Remix)", 120, 1, 120, 2013);
+INSERT INTO Song VALUES(1115, "Be Still", 120, 1, 120, 2013);
+
+INSERT INTO Song VALUES(1116, "Getaway", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1117, "Mind Your Manners", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1118, "My Father’s Son", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1119, "Sirens", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1120, "Lighting Bolt", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1121, "Infallible", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1122, "Pendulum", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1123, "Swallowed Whole", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1124, "Let the Records Play", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1125, "Sleeping By Myself", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1126, "Yellow Moon", 125, 1, 125, 2013);
+INSERT INTO Song VALUES(1127, "Future Days", 125, 1, 125, 2013);
+
+INSERT INTO Song VALUES(1128, "Things That Stop You Dreaming", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1129, "Let Her Go", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1130, "Staring At the Stars", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1131, "All the Little Lights", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1132, "The Wrong Direction", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1133, "Circles", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1134, "Keep On Walking", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1135, "Patient Love", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1136, "Life’s for the Living", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1137, "Holes", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1138, "Feather On the Clyde", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1139, "I Hate (Live From the Borderline, London)", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1140, "Keep On Walking (Acoustic)", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1141, "Patient Love (Acoustic)", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1142, "Staring At the Stars (Acoustic)", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1143, "Circles (Acoustic)", 130, 1, 130, 2012);
+INSERT INTO Song VALUES(1144, "Let Her Go (Acoustic)", 130, 1, 130, 2012);
+
+INSERT INTO Song VALUES(1145, "Shepherd of Fire", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1146, "Hail to the King", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1147, "Doing Time", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1148, "This Means War", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1149, "Requiem", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1150, "Crimson Day", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1151, "Heretic", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1152, "Coming Home", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1153, "Planets", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1154, "Acid Rain", 135, 1, 135, 2013);
+INSERT INTO Song VALUES(1155, "St. James (Bonus Track)", 135, 1, 135, 2013);
+
+INSERT INTO Song VALUES(1156, "Born to Die", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1157, "Off to the Races", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1158, "Blue Jeans", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1159, "Video Games", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1160, "Diet Mountain Dew", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1161, "National Anthem", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1162, "Dark Paradise", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1163, "Radio", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1164, "Carmen", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1165, "Million Dollar Man", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1166, "Summertime Sadness", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1167, "This Is What Makes Us Girls", 140, 1, 140, 2012);
+INSERT INTO Song VALUES(1168, "Video Games (Joy Orbison Remix) [Bonus Track]", 140, 1, 140, 2012);
+
+INSERT INTO Song VALUES(1169, "A Light That Never Comes", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1170, "Castle of Glass (M. Shinoda Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1171, "Lost In The Echo (Killsonik Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1172, "Victimized (M. Shinoda Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1173, "I’ll Be Gone (Vice Remix) [feat. Pusha T]", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1174, "Lies Greed Misery (Dirtyphonics Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1175, "Roads Untraveled (Rad Omen Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1176, "Powerless (Enferno Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1177, "Burn It Down (Tom Swoon Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1178, "Until It Breaks (Datsik Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1179, "Skin To Bone (Nick Catchdubs Remix) [feat. Cody B. Ware & Ryu]", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1180, "I’ll Be Gone (Schoolboy Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1181, "Until It Breaks (Money Mark Headphone Remix)", 145, 1, 145, 2013);
+INSERT INTO Song VALUES(1182, "A Light That Never Comes (Rick Rubin Reboot)", 145, 1, 145, 2013);
 
 /* Genre 2: Pop */
 
@@ -79,7 +300,6 @@ INSERT INTO Album VALUES(330, "Nothing but the Beat", 330, 2, 2011);
 INSERT INTO Album VALUES(335, "Lotus", 335, 2, 2012);
 INSERT INTO Album VALUES(340, "Curiosity", 340, 2, 2012);
 INSERT INTO Album VALUES(345, "Red", 345, 2, 2012);
-
 
 INSERT INTO Song VALUES(2801, "Pusher Love Girl", 300, 2, 300, 2013, 1);
 INSERT INTO Song VALUES(2802, "Suit & Tie feat. Jay-Z", 300, 2, 300, 2013, 2);
@@ -239,7 +459,6 @@ INSERT INTO Artist VALUES(505, "Dream Theater");
 INSERT INTO Artist VALUES(506, "Scale the Summit");
 INSERT INTO Artist VALUES(507, "John Petrucci");
 
-
 INSERT INTO Album VALUES(500, "Ride the Lightning", 500, 3, 1984);
 INSERT INTO Album VALUES(501, "Master of Puppets", 500, 3, 1986);
 INSERT INTO Album VALUES(510, "Peace Sells...But Who's Buying?", 501, 3, 1986);
@@ -250,7 +469,6 @@ INSERT INTO Album VALUES(540, "The Oncoming Storm", 504, 3, 2004);
 INSERT INTO Album VALUES(550, "Black Clouds and Silver Linings", 505, 3, 2009);
 Insert INTO Album VALUES(560, "The Migration", 506, 3, 2013);
 INSERT INTO Album VALUES(570, "Suspended Animation", 507, 3, 2005);
-
 
 INSERT INTO Song VALUES(5000, "Fight Fire With Fire", 500, 3, 500, 1984, 1);
 INSERT INTO Song VALUES(5001, "Ride the Lightning", 500, 3, 500, 1984, 2);
@@ -356,8 +574,6 @@ INSERT INTO Song VALUES(5091, "Damage Control", 507, 3, 570, 2005, 5);
 INSERT INTO Song VALUES(5092, "Curve", 507, 3, 570, 2005, 6);
 INSERT INTO Song VALUES(5093, "Lost Without You", 507, 3, 570, 2005, 7);
 INSERT INTO Song VALUES(5094, "Animate-Inanimate", 507, 3, 570, 2005, 8);
-
-
 
 /* Genre 5: Country */
 
