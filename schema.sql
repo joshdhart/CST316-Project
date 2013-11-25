@@ -280,6 +280,7 @@ INSERT INTO Song VALUES(1182, "A Light That Never Comes (Rick Rubin Reboot)", 14
 
 INSERT INTO Genre VALUES(2, "Pop");
 
+#############  Artists  #############
 INSERT INTO Artist VALUES(300, "Justin Timberlake");
 INSERT INTO Artist VALUES(305, "OneRepublic");
 INSERT INTO Artist VALUES(310, "Miley Cyrus");
@@ -290,6 +291,7 @@ INSERT INTO Artist VALUES(335, "Christina Aguilera");
 INSERT INTO Artist VALUES(340, "Carly Rae Jepsen");
 INSERT INTO Artist VALUES(345, "Taylor Swift");
 
+#############  Albums  #############
 INSERT INTO Album VALUES(300, "The 20/20 Experience", 300, 2, 2013);
 INSERT INTO Album VALUES(305, "Native", 305, 2, 2013);
 INSERT INTO Album VALUES(310, "Bangerz", 310, 2, 2013);
@@ -301,6 +303,7 @@ INSERT INTO Album VALUES(335, "Lotus", 335, 2, 2012);
 INSERT INTO Album VALUES(340, "Curiosity", 340, 2, 2012);
 INSERT INTO Album VALUES(345, "Red", 345, 2, 2012);
 
+#############  Songs  #############
 INSERT INTO Song VALUES(2801, "Pusher Love Girl", 300, 2, 300, 2013, 1);
 INSERT INTO Song VALUES(2802, "Suit & Tie feat. Jay-Z", 300, 2, 300, 2013, 2);
 INSERT INTO Song VALUES(2803, "Don't Hold the Wall", 300, 2, 300, 2013, 3);
@@ -450,6 +453,7 @@ INSERT INTO Song VALUES(3621, "State of Grace (acoustic version)", 345, 2, 345, 
 
 INSERT INTO Genre VALUES(3, "Metal");
 
+#############  Artists  #############
 INSERT INTO Artist VALUES(500, "Metallica");
 INSERT INTO Artist VALUES(501, "Megadeth");
 INSERT INTO Artist VALUES(502, "Trivium");
@@ -459,6 +463,7 @@ INSERT INTO Artist VALUES(505, "Dream Theater");
 INSERT INTO Artist VALUES(506, "Scale the Summit");
 INSERT INTO Artist VALUES(507, "John Petrucci");
 
+#############  Albums  #############
 INSERT INTO Album VALUES(500, "Ride the Lightning", 500, 3, 1984);
 INSERT INTO Album VALUES(501, "Master of Puppets", 500, 3, 1986);
 INSERT INTO Album VALUES(510, "Peace Sells...But Who's Buying?", 501, 3, 1986);
@@ -470,6 +475,7 @@ INSERT INTO Album VALUES(550, "Black Clouds and Silver Linings", 505, 3, 2009);
 Insert INTO Album VALUES(560, "The Migration", 506, 3, 2013);
 INSERT INTO Album VALUES(570, "Suspended Animation", 507, 3, 2005);
 
+#############  Songs  #############
 INSERT INTO Song VALUES(5000, "Fight Fire With Fire", 500, 3, 500, 1984, 1);
 INSERT INTO Song VALUES(5001, "Ride the Lightning", 500, 3, 500, 1984, 2);
 INSERT INTO Song VALUES(5002, "For Whom the Bell Tolls", 500, 3, 500, 1984, 3);
@@ -574,6 +580,135 @@ INSERT INTO Song VALUES(5091, "Damage Control", 507, 3, 570, 2005, 5);
 INSERT INTO Song VALUES(5092, "Curve", 507, 3, 570, 2005, 6);
 INSERT INTO Song VALUES(5093, "Lost Without You", 507, 3, 570, 2005, 7);
 INSERT INTO Song VALUES(5094, "Animate-Inanimate", 507, 3, 570, 2005, 8);
+
+/* Genre 4: Electronic */
+
+INSERT INTO Genre VALUES(4, "Electronic");
+
+#############  Artists  #############
+INSERT INTO Artist VALUES(641, "Skrillex");
+INSERT INTO Artist VALUES(642, "Daft Punk");
+INSERT INTO Artist VALUES(643, "Moby");
+INSERT INTO Artist VALUES(644, "Datsik");
+INSERT INTO Artist VALUES(645, "Excision");
+INSERT INTO Artist VALUES(646, "Bassnectar");
+INSERT INTO Artist VALUES(647, "Orbital");
+
+
+#############  Albums  #############
+INSERT INTO Album VALUES(643, "Bangarang", 641, 4, 2012);
+INSERT INTO Album VALUES(644, "Scary Monsters and Nice Sprites", 641, 4, 2010);
+INSERT INTO Album VALUES(645, "Human After All", 642, 4, 2005);
+INSERT INTO Album VALUES(646, "Last Night", 643, 4, 2008);
+INSERT INTO Album VALUES(647, "Vitamin D", 644, 4, 2012);
+INSERT INTO Album VALUES(648, "The Remixes", 645, 4, 2012);
+INSERT INTO Album VALUES(649, "Vava Voom", 646, 4, 2012);
+INSERT INTO Album VALUES(641, "The Altogether", 647, 4, 2001);
+INSERT INTO Album VALUES(642, "Blue Album", 647, 4, 2001);
+
+
+#############  Songs  #############
+
+INSERT INTO Song VALUES(6421, "Right in", 641, 4, 643, 2012, 1);
+INSERT INTO Song VALUES(6422, "Bangarang", 641, 4, 643, 2012, 2);
+INSERT INTO Song VALUES(6423, "Breakin' a Sweat", 641, 4, 643, 2012, 3);
+INSERT INTO Song VALUES(6424, "The Devil's Den", 641, 4, 643, 2012, 4);
+INSERT INTO Song VALUES(6425, "Right on Time", 641, 4, 643, 2012, 5);
+INSERT INTO Song VALUES(6426, "Kyoto", 641, 4, 643, 2012, 6);
+INSERT INTO Song VALUES(6427, "Summit", 641, 4, 643, 2012, 7);
+INSERT INTO Song VALUES(6428, "Rock n' Roll", 641, 4, 644, 2010, 1);
+INSERT INTO Song VALUES(6429, "Scary Monsters and Nice Sprites", 641, 4, 644, 2);
+INSERT INTO Song VALUES(6430, "Kill EVERYBODY", 641, 4, 644, 2010, 3);
+INSERT INTO Song VALUES(6431, "All I Ask of You", 641, 4, 644, 2010, 4);
+INSERT INTO Song VALUES(6432, "Scatta", 641, 4, 644, 2010, 5);
+INSERT INTO Song VALUES(6433, "With You, Friends", 641, 4, 644, 2010, 6);
+INSERT INTO Song VALUES(6434, "Scary Monsters Noisia Remix", 641, 4, 644, 2010, 7);
+INSERT INTO Song VALUES(6435, "Scary Monsters Zedd Remix", 641, 4, 644, 2010, 8);
+INSERT INTO Song VALUES(6436, "Kill EVERYBODY Bare Noize Remix", 641, 4, 644, 2010, 9);
+
+INSERT INTO Song VALUES(6437, "Human After All", 642, 4, 645, 2005, 1);
+INSERT INTO Song VALUES(6438, "The Prime Time of Your Life", 642, 4, 645, 2005, 2);
+INSERT INTO Song VALUES(6439, "Robot Rock", 642, 4, 645, 2005, 3);
+INSERT INTO Song VALUES(6440, "Steam Machine", 642, 4, 645, 2005, 4);
+INSERT INTO Song VALUES(6441, "Make Love", 642, 4, 645, 2005, 5);
+INSERT INTO Song VALUES(6442, "The Brainwasher", 642, 4, 645, 2005, 6);
+INSERT INTO Song VALUES(6443, "On/Off", 642, 4, 645, 2005, 7);
+INSERT INTO Song VALUES(6444, "Television Rules the Nation", 642, 4, 645, 2005, 8);
+INSERT INTO Song VALUES(6445, "Technologic", 642, 4, 645, 2005, 9);
+INSERT INTO Song VALUES(6446, "Emotion", 642, 4, 645, 2005, 10);
+
+INSERT INTO Song VALUES(6447, "Ooh Yeah", 643, 4, 646, 2008, 1);
+INSERT INTO Song VALUES(6448, "I Love to Move In Here", 643, 4, 646, 2008, 2);
+INSERT INTO Song VALUES(6449, "257.Zero", 643, 4, 646, 2008, 3);
+INSERT INTO Song VALUES(6450, "Everyday It's 1989", 643, 4, 646, 2008, 4);
+INSERT INTO Song VALUES(6451, "Live for Tomorrow", 643, 4, 646, 2008, 5);
+INSERT INTO Song VALUES(6452, "Alice", 643, 4, 646, 2008, 6);
+INSERT INTO Song VALUES(6453, "Hyenas", 643, 4, 646, 2008, 7);
+INSERT INTO Song VALUES(6454, "I'm in Love", 643, 4, 646, 2008, 8);
+INSERT INTO Song VALUES(6455, "Disco Lies", 643, 4, 646, 2008, 9);
+INSERT INTO Song VALUES(6456, "The Stars", 643, 4, 646, 2008, 10);
+INSERT INTO Song VALUES(6457, "Degenerates", 643, 4, 646, 2008, 11);
+INSERT INTO Song VALUES(6458, "Sweet Apocalypse", 643, 4, 646, 2008, 12);
+INSERT INTO Song VALUES(6459, "Mothers of the Night", 643, 4, 646, 2008, 13);
+INSERT INTO Song VALUES(6460, "Last Night", 643, 4, 646, 2008, 14);
+
+INSERT INTO Song VALUES(6461, "Annihilate", 644, 4, 647, 2012, 1);
+INSERT INTO Song VALUES(6462, "Fully Blown", 644, 4, 647, 2012, 2);
+INSERT INTO Song VALUES(6463, "Syndrome", 644, 4, 647, 2012, 3);
+INSERT INTO Song VALUES(6464, "Bonafide Hustler", 644, 4, 647, 2012, 4);
+INSERT INTO Song VALUES(6465, "Evilution", 644, 4, 647, 2012, 5);
+INSERT INTO Song VALUES(6466, "Need You", 644, 4, 647, 2012, 6);
+INSERT INTO Song VALUES(6467, "Don't Feel Right", 644, 4, 647, 2012, 7);
+INSERT INTO Song VALUES(6468, "Light the Fuse", 644, 4, 647, 2012, 8);
+INSERT INTO Song VALUES(6469, "Complete Control", 644, 4, 647, 2012, 9);
+INSERT INTO Song VALUES(6470, "Punisher", 644, 4, 647, 2012, 10);
+INSERT INTO Song VALUES(6471, "Napalm", 644, 4, 647, 2012, 11);
+INSERT INTO Song VALUES(6472, "Double Trouble", 644, 4, 647, 2012, 12);
+
+INSERT INTO Song VALUES(6473, "Deviance", 645, 4, 648, 2012, 1);
+INSERT INTO Song VALUES(6474, "X Rated", 645, 4, 648, 2012, 2);
+INSERT INTO Song VALUES(6475, "Sleepless", 645, 4, 648, 2012, 3);
+INSERT INTO Song VALUES(6476, "Ohhh Nooo", 645, 4, 648, 2012, 4);
+INSERT INTO Song VALUES(6477, "The Underground", 645, 4, 648, 2012, 5);
+INSERT INTO Song VALUES(6478, "Execute", 645, 4, 648, 2012, 6);
+INSERT INTO Song VALUES(6479, "Swerve", 645, 4, 648, 2012, 7);
+INSERT INTO Song VALUES(6480, "Sexism", 645, 4, 648, 2012, 8);
+INSERT INTO Song VALUES(6481, "Sleepless", 645, 4, 648, 2012, 9);
+INSERT INTO Song VALUES(6482, "X Rated 2", 645, 4, 648, 2012, 10);
+INSERT INTO Song VALUES(6483, "8 Bit Superhero", 645, 4, 648, 2012, 11);
+
+INSERT INTO Song VALUES(6484, "Vava Voom", 646, 4, 649, 2012, 1);
+INSERT INTO Song VALUES(6485, "Empathy", 646, 4, 649, 2012, 2);
+INSERT INTO Song VALUES(6486, "Ugly", 646, 4, 649, 2012, 3);
+INSERT INTO Song VALUES(6487, "Ping Pong", 646, 4, 649, 2012, 4);
+INSERT INTO Song VALUES(6488, "What", 646, 4, 649, 2012, 5);
+INSERT INTO Song VALUES(6489, "Pennywise Tribute", 646, 4, 649, 2012, 6);
+INSERT INTO Song VALUES(6490, "Do It Like This", 646, 4, 649, 2012, 7);
+INSERT INTO Song VALUES(6491, "Laughter Crescendo", 646, 4, 649, 2012, 8);
+INSERT INTO Song VALUES(6492, "Butterfly", 646, 4, 649, 2012, 9);
+INSERT INTO Song VALUES(6493, "Nothing Has Been Broken", 646, 4, 649, 2012, 10);
+INSERT INTO Song VALUES(6494, "Chronological Outtakes", 646, 4, 649, 2012, 11);
+
+INSERT INTO Song VALUES(6401, "Tension", 647, 4, 641, 2001, 1);
+INSERT INTO Song VALUES(6402, "Funny Break", 647, 4, 641, 2001, 2);
+INSERT INTO Song VALUES(6403, "Oi!", 647, 4, 641, 2001, 3);
+INSERT INTO Song VALUES(6404, "Pay Per View", 647, 4, 641, 2001, 4);
+INSERT INTO Song VALUES(6405, "Tootled", 647, 4, 641, 2001, 5);
+INSERT INTO Song VALUES(6406, "Last Thing", 647, 4, 641, 2001, 6);
+INSERT INTO Song VALUES(6407, "Doctor?", 647, 4, 641, 2001, 7);
+INSERT INTO Song VALUES(6408, "Shadows", 647, 4, 641, 2001, 8);
+INSERT INTO Song VALUES(6409, "Waving Not Drowning", 647, 4, 641, 2001, 9);
+INSERT INTO Song VALUES(6410, "Illuminate", 647, 4, 641, 2001, 10);
+INSERT INTO Song VALUES(6411, "Meltdown", 647, 4, 641, 2001, 11);
+INSERT INTO Song VALUES(6412, "Transient", 647, 4, 642, 2004, 1);
+INSERT INTO Song VALUES(6413, "Pants", 647, 4, 642, 2004, 2);
+INSERT INTO Song VALUES(6414, "Tunnel Vision", 647, 4, 642, 2004, 3);
+INSERT INTO Song VALUES(6415, "Lost", 647, 4, 642, 2004, 4);
+INSERT INTO Song VALUES(6416, "You Lot", 647, 4, 642, 2004, 5);
+INSERT INTO Song VALUES(6417, "Bath Time", 647, 4, 642, 2004, 6);
+INSERT INTO Song VALUES(6418, "Acid Pants", 647, 4, 642, 2004, 7);
+INSERT INTO Song VALUES(6419, "Easy Serv", 647, 4, 642, 2004, 8);
+INSERT INTO Song VALUES(6420, "One Perfect Sunrise", 647, 4, 642, 2004, 9);
 
 /* Genre 5: Country */
 
@@ -742,126 +877,3 @@ INSERT INTO Song VALUES(9126, "See You When I See You", 904, 5, 909, 2010, 13);
 INSERT INTO Song VALUES(9127, "If She Could See Me Now", 904, 5, 909, 2010, 14);
 INSERT INTO Song VALUES(9128, "Days Like These", 904, 5, 909, 2010, 15);
 
-
-/* Genre 4: Electronic */
-INSERT INTO Genre VALUES(4, "Electronic");
-
-
-#############  Artists  #############
-INSERT INTO Artist VALUES(641, "Skrillex")
-INSERT INTO Artist VALUES(642, "Daft Punk")
-INSERT INTO Artist VALUES(643, "Moby")
-INSERT INTO Artist VALUES(644, "Datsik")
-INSERT INTO Artist VALUES(645, "Excision")
-INSERT INTO Artist VALUES(646, "Bassnectar")
-INSERT INTO Artist VALUES(647, "Orbital")
-
-
-#############  Albums  #############
-INSERT INTO Album VALUES(643, "Bangarang", 641, 4, 2012)
-INSERT INTO Album VALUES(644, "Scary Monsters and Nice Sprites", 641, 4, 2010)
-INSERT INTO Album VALUES(645, "Human After All", 642, 4, 2005)
-INSERT INTO Album VALUES(646, "Last Night", 643, 4, 2008)
-INSERT INTO Album VALUES(647, "Vitamin D", 644, 4, 2012)
-INSERT INTO Album VALUES(648, "The Remixes", 645, 4, 2012) 
-INSERT INTO Album VALUES(649, "Vava Voom", 646, 4, 2012)
-INSERT INTO Album VALUES(641, "The Altogether", 647, 4, 2001)
-INSERT INTO Album VALUES(642, "Blue Album", 647, 4, 2001)
-
-
-#############  Songs  #############
-
-INSERT INTO Song VALUES(6421, "Right in", 641, 4, 643, 2012, 1)
-INSERT INTO Song VALUES(6422, "Bangarang", 641, 4, 643, 2012, 2)
-INSERT INTO Song VALUES(6423, "Breakin' a Sweat", 641, 4, 643, 2012, 3)
-INSERT INTO Song VALUES(6424, "The Devil's Den", 641, 4, 643, 2012, 4)
-INSERT INTO Song VALUES(6425, "Right on Time", 641, 4, 643, 2012, 5)
-INSERT INTO Song VALUES(6426, "Kyoto", 641, 4, 643, 2012, 6)
-INSERT INTO Song VALUES(6427, "Summit", 641, 4, 643, 2012, 7)
-INSERT INTO Song VALUES(6428, "Rock n' Roll", 641, 4, 644, 2010, 1)
-INSERT INTO Song VALUES(6429, "Scary Monsters and Nice Sprites", 641, 4, 644, 2)
-INSERT INTO Song VALUES(6430, "Kill EVERYBODY", 641, 4, 644, 2010, 3)
-INSERT INTO Song VALUES(6431, "All I Ask of You", 641, 4, 644, 2010, 4)
-INSERT INTO Song VALUES(6432, "Scatta", 641, 4, 644, 2010, 5)
-INSERT INTO Song VALUES(6433, "With You, Friends", 641, 4, 644, 2010, 6)
-INSERT INTO Song VALUES(6434, "Scary Monsters Noisia Remix", 641, 4, 644, 2010, 7)
-INSERT INTO Song VALUES(6435, "Scary Monsters Zedd Remix", 641, 4, 644, 2010, 8)
-INSERT INTO Song VALUES(6436, "Kill EVERYBODY Bare Noize Remix", 641, 4, 644, 2010, 9)
-INSERT INTO Song VALUES(6437, "Human After All", 642, 4, 645, 2005, 1)
-INSERT INTO Song VALUES(6438, "The Prime Time of Your Life", 642, 4, 645, 2005, 2)
-INSERT INTO Song VALUES(6439, "Robot Rock", 642, 4, 645, 2005, 3)
-INSERT INTO Song VALUES(6440, "Steam Machine", 642, 4, 645, 2005, 4)
-INSERT INTO Song VALUES(6441, "Make Love", 642, 4, 645, 2005, 5)
-INSERT INTO Song VALUES(6442, "The Brainwasher", 642, 4, 645, 2005, 6)
-INSERT INTO Song VALUES(6443, "On/Off", 642, 4, 645, 2005, 7)
-INSERT INTO Song VALUES(6444, "Television Rules the Nation", 642, 4, 645, 2005, 8)
-INSERT INTO Song VALUES(6445, "Technologic", 642, 4, 645, 2005, 9)
-INSERT INTO Song VALUES(6446, "Emotion", 642, 4, 645, 2005, 10)
-INSERT INTO Song VALUES(6447, "Ooh Yeah", 643, 4, 646, 2008, 1)
-INSERT INTO Song VALUES(6448, "I Love to Move In Here", 643, 4, 646, 2008, 2)
-INSERT INTO Song VALUES(6449, "257.Zero", 643, 4, 646, 2008, 3)
-INSERT INTO Song VALUES(6450, "Everyday It's 1989", 643, 4, 646, 2008, 4)
-INSERT INTO Song VALUES(6451, "Live for Tomorrow", 643, 4, 646, 2008, 5)
-INSERT INTO Song VALUES(6452, "Alice", 643, 4, 646, 2008, 6)
-INSERT INTO Song VALUES(6453, "Hyenas", 643, 4, 646, 2008, 7)
-INSERT INTO Song VALUES(6454, "I'm in Love", 643, 4, 646, 2008, 8)
-INSERT INTO Song VALUES(6455, "Disco Lies", 643, 4, 646, 2008, 9)
-INSERT INTO Song VALUES(6456, "The Stars", 643, 4, 646, 2008, 10)
-INSERT INTO Song VALUES(6457, "Degenerates", 643, 4, 646, 2008, 11)
-INSERT INTO Song VALUES(6458, "Sweet Apocalypse", 643, 4, 646, 2008, 12)
-INSERT INTO Song VALUES(6459, "Mothers of the Night", 643, 4, 646, 2008, 13)
-INSERT INTO Song VALUES(6460, "Last Night", 643, 4, 646, 2008, 14)
-INSERT INTO Song VALUES(6461, "Annihilate", 644, 4, 647, 2012, 1)
-INSERT INTO Song VALUES(6462, "Fully Blown", 644, 4, 647, 2012, 2)
-INSERT INTO Song VALUES(6463, "Syndrome", 644, 4, 647, 2012, 3)
-INSERT INTO Song VALUES(6464, "Bonafide Hustler", 644, 4, 647, 2012, 4)
-INSERT INTO Song VALUES(6465, "Evilution", 644, 4, 647, 2012, 5)
-INSERT INTO Song VALUES(6466, "Need You", 644, 4, 647, 2012, 6)
-INSERT INTO Song VALUES(6467, "Don't Feel Right", 644, 4, 647, 2012, 7)
-INSERT INTO Song VALUES(6468, "Light the Fuse", 644, 4, 647, 2012, 8)
-INSERT INTO Song VALUES(6469, "Complete Control", 644, 4, 647, 2012, 9)
-INSERT INTO Song VALUES(6470, "Punisher", 644, 4, 647, 2012, 10)
-INSERT INTO Song VALUES(6471, "Napalm", 644, 4, 647, 2012, 11)
-INSERT INTO Song VALUES(6472, "Double Trouble", 644, 4, 647, 2012, 12)
-INSERT INTO Song VALUES(6473, "Deviance", 645, 4, 648, 2012, 1)
-INSERT INTO Song VALUES(6474, "X Rated", 645, 4, 648, 2012, 2)
-INSERT INTO Song VALUES(6475, "Sleepless", 645, 4, 648, 2012, 3)
-INSERT INTO Song VALUES(6476, "Ohhh Nooo", 645, 4, 648, 2012, 4)
-INSERT INTO Song VALUES(6477, "The Underground", 645, 4, 648, 2012, 5)
-INSERT INTO Song VALUES(6478, "Execute", 645, 4, 648, 2012, 6)
-INSERT INTO Song VALUES(6479, "Swerve", 645, 4, 648, 2012, 7)
-INSERT INTO Song VALUES(6480, "Sexism", 645, 4, 648, 2012, 8)
-INSERT INTO Song VALUES(6481, "Sleepless", 645, 4, 648, 2012, 9)
-INSERT INTO Song VALUES(6482, "X Rated 2", 645, 4, 648, 2012, 10)
-INSERT INTO Song VALUES(6483, "8 Bit Superhero", 645, 4, 648, 2012, 11)
-INSERT INTO Song VALUES(6484, "Vava Voom", 646, 4, 649, 2012, 1)
-INSERT INTO Song VALUES(6485, "Empathy", 646, 4, 649, 2012, 2)
-INSERT INTO Song VALUES(6486, "Ugly", 646, 4, 649, 2012, 3)
-INSERT INTO Song VALUES(6487, "Ping Pong", 646, 4, 649, 2012, 4)
-INSERT INTO Song VALUES(6488, "What", 646, 4, 649, 2012, 5)
-INSERT INTO Song VALUES(6489, "Pennywise Tribute", 646, 4, 649, 2012, 6)
-INSERT INTO Song VALUES(6490, "Do It Like This", 646, 4, 649, 2012, 7)
-INSERT INTO Song VALUES(6491, "Laughter Crescendo", 646, 4, 649, 2012, 8)
-INSERT INTO Song VALUES(6492, "Butterfly", 646, 4, 649, 2012, 9)
-INSERT INTO Song VALUES(6493, "Nothing Has Been Broken", 646, 4, 649, 2012, 10)
-INSERT INTO Song VALUES(6494, "Chronological Outtakes", 646, 4, 649, 2012, 11)
-INSERT INTO Song VALUES(6401, "Tension", 647, 4, 641, 2001, 1)
-INSERT INTO Song VALUES(6402, "Funny Break", 647, 4, 641, 2001, 2)
-INSERT INTO Song VALUES(6403, "Oi!", 647, 4, 641, 2001, 3)
-INSERT INTO Song VALUES(6404, "Pay Per View", 647, 4, 641, 2001, 4)
-INSERT INTO Song VALUES(6405, "Tootled", 647, 4, 641, 2001, 5)
-INSERT INTO Song VALUES(6406, "Last Thing", 647, 4, 641, 2001, 6)
-INSERT INTO Song VALUES(6407, "Doctor?", 647, 4, 641, 2001, 7)
-INSERT INTO Song VALUES(6408, "Shadows", 647, 4, 641, 2001, 8)
-INSERT INTO Song VALUES(6409, "Waving Not Drowning", 647, 4, 641, 2001, 9)
-INSERT INTO Song VALUES(6410, "Illuminate", 647, 4, 641, 2001, 10)
-INSERT INTO Song VALUES(6411, "Meltdown", 647, 4, 641, 2001, 11)
-INSERT INTO Song VALUES(6412, "Transient", 647, 4, 642, 2004, 1)
-INSERT INTO Song VALUES(6413, "Pants", 647, 4, 642, 2004, 2)
-INSERT INTO Song VALUES(6414, "Tunnel Vision", 647, 4, 642, 2004, 3)
-INSERT INTO Song VALUES(6415, "Lost", 647, 4, 642, 2004, 4)
-INSERT INTO Song VALUES(6416, "You Lot", 647, 4, 642, 2004, 5)
-INSERT INTO Song VALUES(6417, "Bath Time", 647, 4, 642, 2004, 6)
-INSERT INTO Song VALUES(6418, "Acid Pants", 647, 4, 642, 2004, 7)
-INSERT INTO Song VALUES(6419, "Easy Serv", 647, 4, 642, 2004, 8)
-INSERT INTO Song VALUES(6420, "One Perfect Sunrise", 647, 4, 642, 2004, 9)
