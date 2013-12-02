@@ -32,10 +32,13 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
     </div>
+    <footer class="footer-fixed-bottom">
+        <div class="container">
+            <p>&copy; 2013 - CST 316 - Team Project Prototype Application</p>
+            <p>Project Team: Josh Hartwell, Patrick Jarofski, Chase Marcum, John Price, Jordan Ringo</p>
+        </div>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
