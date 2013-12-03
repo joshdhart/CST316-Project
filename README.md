@@ -7,7 +7,7 @@ Chase Marcum - Team Leader,
 John Price - Architect,
 Jordan Ringo - Programmer,
 Josh Hartwell - Programmer,
-Patrick Jarofski - Programmer,
+Patrick Jarofski - Programmer
 
 Goal:                 Create a prototype of an n-tier web application
 
