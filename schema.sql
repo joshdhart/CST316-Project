@@ -54,6 +54,13 @@ CREATE TABLE Genre(
   type VARCHAR(50)
 );
 
+DROP TABLE IF EXISTS AlbumArt;
+CREATE TABLE AlbumArt(
+  id INT PRIMARY KEY,
+  albumID INT,
+  uml VARCHAR(255)
+);
+
 /* Genre 1: Rock */
 
 INSERT INTO Genre VALUES(1, "Rock");
@@ -876,4 +883,65 @@ INSERT INTO Song VALUES(9125, "Don't You Wanna Stay", 904, 5, 909, 2010, 12);
 INSERT INTO Song VALUES(9126, "See You When I See You", 904, 5, 909, 2010, 13);
 INSERT INTO Song VALUES(9127, "If She Could See Me Now", 904, 5, 909, 2010, 14);
 INSERT INTO Song VALUES(9128, "Days Like These", 904, 5, 909, 2010, 15);
+
+/* AlbumArt */
+
+###########  AlbumArt Rock  #########
+INSERT INTO AlbumArt VALUES(100,100,"/img/AlbumArt/Rock/imagineDragonsNightVisions_1651x1451.jpg");
+INSERT INTO AlbumArt VALUES(105,105,"/img/AlbumArt/Rock/arcadeFireReflektor_500x500.jpg");
+INSERT INTO AlbumArt VALUES(110,110,"/img/AlbumArt/Rock/beatlesOnAirLiveAtTheBBCVolume2_1500x1375.jpg");
+INSERT INTO AlbumArt VALUES(115,115,"/img/AlbumArt/Rock/lordePureHeroine_612x612.jpg");
+INSERT INTO AlbumArt VALUES(120,120,"/img/AlbumArt/Rock/killersDirectHits_1000x1000.jpg");
+INSERT INTO AlbumArt VALUES(125,125,"/img/AlbumArt/Rock/peralJamLightingBolt_1500x1500.jpg");
+INSERT INTO AlbumArt VALUES(130,130,"/img/AlbumArt/Rock/passengerAllTheLittleLights_923x919.jpg");
+INSERT INTO AlbumArt VALUES(135,135,"/img/AlbumArt/Rock/avengedSevenfoldHailToTheKing_600x600.jpg");
+INSERT INTO AlbumArt VALUES(140,140,"/img/AlbumArt/Rock/lanaDelReyBornTiDie_960x960.jpg");
+INSERT INTO AlbumArt VALUES(145,145,"/img/AlbumArt/Rock/linkinParkRecharged1200x1200.png");
+
+###########  AlbumArt Pop  ##########
+INSERT INTO AlbumArt VALUES(300,300,"/img/AlbumArt/Pop (450x450)/The 20 20 Experience.jpg");
+INSERT INTO AlbumArt VALUES(305,305,"/img/AlbumArt/Pop (450x450)/Native.jpg");
+INSERT INTO AlbumArt VALUES(310,310,"/img/AlbumArt/Pop (450x450)/Bangerz.jpg");
+INSERT INTO AlbumArt VALUES(315,315,"/img/AlbumArt/Pop (450x450)/Unorthodox Jukebox.jpg");
+INSERT INTO AlbumArt VALUES(320,320,"/img/AlbumArt/Pop (450x450)/Doo-Wops & Hooligans.jpg");
+INSERT INTO AlbumArt VALUES(325,325,"/img/AlbumArt/Pop (450x450)/Take Me Home.jpg");
+INSERT INTO AlbumArt VALUES(330,330,"/img/AlbumArt/Pop (450x450)/Nothing but the Beat.jpg");
+INSERT INTO AlbumArt VALUES(335,335,"/img/AlbumArt/Pop (450x450)/Lotus.jpg");
+INSERT INTO AlbumArt VALUES(340,340,"/img/AlbumArt/Pop (450x450)/Curiosity.jpg");
+INSERT INTO AlbumArt VALUES(345,345,"/img/AlbumArt/Pop (450x450)/Red.jpg");
+
+#########  AlbumArt Metal  ##########
+INSERT INTO AlbumArt VALUES(500,500,"/img/AlbumArt/Metal/Metallica Ride the Lightning.jpg");
+INSERT INTO AlbumArt VALUES(501,501,"/img/AlbumArt/Metal/Metallica Master of Puppets.jpg");
+INSERT INTO AlbumArt VALUES(510,510,"/img/AlbumArt/Metal/Megadeth Peace Sells But Whos Buying.jpg");
+INSERT INTO AlbumArt VALUES(520,520,"/img/AlbumArt/Metal/Trivium Shogun.jpg");
+INSERT INTO AlbumArt VALUES(521,521,"/img/AlbumArt/Metal/Trivim In Waves.jpg");
+INSERT INTO AlbumArt VALUES(530,530,"/img/AlbumArt/Metal/Mutiny Within.jpeg");
+INSERT INTO AlbumArt VALUES(540,540,"/img/AlbumArt/Metal/Unearth The Oncoming Storm.jpg");
+INSERT INTO AlbumArt VALUES(550,550,"/img/AlbumArt/Metal/Dream Theater Black Clouds and Silver Linings.jpg");
+INSERT INTO AlbumArt VALUES(560,560,"/img/AlbumArt/Metal/Scale the Summit The Migration.jpg");
+INSERT INTO AlbumArt VALUES(570,570,"/img/AlbumArt/Metal/John Petrucci Suspended Animation.png");
+
+#########  AlbumArt Techno  #########
+INSERT INTO AlbumArt VALUES(641,641,"/img/AlbumArt/Techno/orbital.jpg");
+INSERT INTO AlbumArt VALUES(642,642,"/img/AlbumArt/Techno/orbital2.jpg");
+INSERT INTO AlbumArt VALUES(643,643,"/img/AlbumArt/Techno/skrillex.jpg");
+INSERT INTO AlbumArt VALUES(644,644,"/img/AlbumArt/Techno/skrillex2.jpg");
+INSERT INTO AlbumArt VALUES(645,645,"/img/AlbumArt/Techno/daftpunk.jpg");
+INSERT INTO AlbumArt VALUES(646,646,"/img/AlbumArt/Techno/moby.jpg");
+INSERT INTO AlbumArt VALUES(647,647,"/img/AlbumArt/Techno/datsik.jpg");
+INSERT INTO AlbumArt VALUES(648,648,"/img/AlbumArt/Techno/excision.jpg");
+INSERT INTO AlbumArt VALUES(649,649,"/img/AlbumArt/Techno/bassnectar.jpg");
+
+########  AlbumArt Country  #########
+INSERT INTO AlbumArt VALUES(900,900,"/img/AlbumArt/Country/Based On A True Story.jpg");
+INSERT INTO AlbumArt VALUES(901,901,"/img/AlbumArt/Country/Doin' My Thing.jpg");
+INSERT INTO AlbumArt VALUES(902,902,"/img/AlbumArt/Country/Fearless.jpg");
+INSERT INTO AlbumArt VALUES(903,903,"/img/AlbumArt/Country/Some Hearts.jpg");
+INSERT INTO AlbumArt VALUES(904,904,"/img/AlbumArt/Country/Jason Aldean.jpg");
+INSERT INTO AlbumArt VALUES(905,905,"/img/AlbumArt/Country/Crazy Ex-Girlfriend.jpg");
+INSERT INTO AlbumArt VALUES(906,906,"/img/AlbumArt/Country/Hunter Hayes (Encore).jpg");
+INSERT INTO AlbumArt VALUES(907,907,"/img/AlbumArt/Country/Learn to Live.jpg");
+INSERT INTO AlbumArt VALUES(908,908,"/img/AlbumArt/Country/Blown Away (2).jpg");
+INSERT INTO AlbumArt VALUES(909,909,"/img/AlbumArt/Country/My Kinda Party.jpg");
 
