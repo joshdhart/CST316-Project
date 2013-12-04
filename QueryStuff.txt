@@ -1,0 +1,46 @@
+//pass a letter or number (replace a with that variable)
+//returns artists that start with that letter or number
+select name from artist where name like "a%" order by name;
+
+//returns albums that start with that letter or number
+select name from album where name like "a%" order by name
+
+//returns songs that start with that letter or number
+select title from song where title like "a%" order by title;
+
+//when passed a string (replace a with that variable)
+//returns artists that include that string
+select name from artist where name like "%a%" order by name;
+
+//returns albums that include that string
+select name from album where name like "%a%" order by name;
+
+//returns songs that include that string
+select title from song where title like "%a%" order by title;
+
+
+//returns all albums sorted by album title
+select name from album order by name;
+
+//returns all artists sorted by name
+select name from artist order by name;
+
+//returns all songs sorted by title
+select title from song order by title;
+
+//given an artist id, returns albums by that artist (replace 110 with ID)
+select name from album where artistID = 110 order by name;
+
+//given an album id, returns songs in that album (replace 110 with ID)
+select title, trackNum from song where albumID = 110 order by trackNum;
+
+//given a song id, return the song (replace 1012 with ID)
+select title from song where id = 1012;
+
+//given a song id, insert song into playlist(this one is convoluted but works!)
+//just replace 1012 with whatever id the song has
+//I figure that this method can be used in conjunction with a loop or iterator or whatever to add an //entire album
+
+insert into Playlist values((select title from song where id = 1012), (select name from artist where artist.id = (select artistID from song where id = 1012)), (select name from album where album.id = (select albumID from song where id = 1012)), (select type from genre where genre.id = (select genreID from song where id = 1012)));
+
+//this is what I have come up with so far.  if there are any glaring errors, any suggestions, or anything //that anybody would like to add, feel free to edit or email me! 
