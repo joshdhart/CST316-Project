@@ -68,11 +68,11 @@ CREATE TABLE Playlist(
 
 	playlistID VARCHAR(255) PRIMARY KEY,
 	
-	artistID VARCHAR(255) default null references Artist(artistID),
+	artistID INT default null references Artist(artistID),
 	
-	albumID VARCHAR(255) default null references Album(albumID),
+	albumID INT default null references Album(albumID),
 	
-	genreID VARCHAR(255) default null references Genre(genreID)
+	genreID INT default null references Genre(genreID)
 	
 );
 
