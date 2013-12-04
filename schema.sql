@@ -23,42 +23,75 @@ list the track numbers when we display an album
 
 
 DROP TABLE IF EXISTS Album;
+
 CREATE TABLE Album (
+
   id INT PRIMARY KEY,
+
   name VARCHAR(255),
-  artistID INT,
-  genreID INT,
-  releaseYear INT
+
+  artistID INT default null,
+
+  genreID INT default null,
+
+  releaseYear INT default null
+
 );
 
+
 DROP TABLE IF EXISTS Song;
+
 CREATE TABLE Song(
+
   id INT PRIMARY KEY,
+
   title VARCHAR(255),
-  artistID INT,
-  genreID INT,
-  albumID INT,
-  releaseYear INT,
-  trackNum INT
+
+  artistID INT default null,
+
+  genreID INT default null,
+
+  albumID INT default null,
+
+  releaseYear INT default null,
+
+  trackNum INT default null
+
+);
+
+DROP TABLE IF EXISTS Playlist;
+
+CREATE TABLE Playlist(
+
+	title VARCHAR(255) PRIMARY KEY,
+	
+	artist VARCHAR(255) default null,
+	
+	album VARCHAR(255) default null,
+	
+	genre VARCHAR(255) default null
+	
 );
 
 DROP TABLE IF EXISTS Artist;
+
 CREATE TABLE Artist(
+
   id INT PRIMARY KEY,
+
   name VARCHAR(255)
+
 );
+
 
 DROP TABLE IF EXISTS Genre;
-CREATE TABLE Genre(
-  id INT PRIMARY KEY,
-  type VARCHAR(50)
-);
 
-DROP TABLE IF EXISTS AlbumArt;
-CREATE TABLE AlbumArt(
+CREATE TABLE Genre(
+
   id INT PRIMARY KEY,
-  albumID INT,
-  uml VARCHAR(255)
+
+  type VARCHAR(50)
+
 );
 
 /* Genre 1: Rock */
