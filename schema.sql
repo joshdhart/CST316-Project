@@ -73,6 +73,14 @@ CREATE TABLE Playlist(
 	
 );
 
+DROP TABLE IF EXISTS AlbumArt;
+
+CREATE TABLE AlbumArt (
+id INT PRIMARY KEY,
+albumId INT,
+url VARCHAR(255)
+);
+
 DROP TABLE IF EXISTS Artist;
 
 CREATE TABLE Artist(
