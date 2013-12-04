@@ -66,15 +66,30 @@ DROP TABLE IF EXISTS Playlist;
 
 CREATE TABLE Playlist(
 
-	title VARCHAR(255) PRIMARY KEY,
+	playlistID VARCHAR(255) PRIMARY KEY,
 	
-	artist VARCHAR(255) default null,
+	artistID VARCHAR(255) default null references Artist(artistID),
 	
-	album VARCHAR(255) default null,
+	albumID VARCHAR(255) default null references Album(albumID),
 	
-	genre VARCHAR(255) default null
+	genreID VARCHAR(255) default null references Genre(genreID)
 	
 );
+
+
+-- CREATE TABLE Playlist(
+
+-- 	title VARCHAR(255) PRIMARY KEY,
+	
+-- 	artist VARCHAR(255) default null,
+	
+-- 	album VARCHAR(255) default null,
+	
+-- 	genre VARCHAR(255) default null
+	
+-- );
+
+
 
 DROP TABLE IF EXISTS AlbumArt;
 
