@@ -1,25 +1,25 @@
-/* Here's what I'm thinking, Each person just use 1-5 for the genre id,
-100-999 for album and artist id's, and 1000-9999 for song title.
-I'll tell you your numbers in the following format:
-Name (genreID, albumID range, artistID range, songID range)
-Chase (1, 100-280, 100-280, 1000-2800)
-Josh (2, 281-460, 281-460, 2801-4600)
-Patrick (3, 461-640, 461-640, 4601-6400)
-John (4, 641-820, 641-820, 6401-8200)
-Jordan (5, 821-999, 821-999, 8201-9999)
+-- Here's what I'm thinking, Each person just use 1-5 for the genre id,
+-- 100-999 for album and artist id's, and 1000-9999 for song title.
+--I'll tell you your numbers in the following format:
+-- Name (genreID, albumID range, artistID range, songID range)
+-- Chase (1, 100-280, 100-280, 1000-2800)
+-- Josh (2, 281-460, 281-460, 2801-4600)
+-- Patrick (3, 461-640, 461-640, 4601-6400)
+-- John (4, 641-820, 641-820, 6401-8200)
+-- Jordan (5, 821-999, 821-999, 8201-9999)
 
-Don't think we have to complicate the album table by throwing in a 
-list of songs, we can get the songs by doing a select by album id 
-in the song table. Just my thoughts, feel free to make any necessary 
-changes (or just changes for general improvement).
+-- Don't think we have to complicate the album table by throwing in a 
+-- list of songs, we can get the songs by doing a select by album id 
+-- in the song table. Just my thoughts, feel free to make any necessary 
+-- changes (or just changes for general improvement).
 
-The schema can be found below, please add your inserts to the 
-appropriate sections.
+-- The schema can be found below, please add your inserts to the 
+-- appropriate sections.
 
-### Edited by Jordan on 11/23/2013 @ 6pm: 
-I added the trackID to Song so that we can more easily 
-list the track numbers when we display an album
-------------------------------------------------------------------------------------------------*/
+------ Edited by Jordan on 11/23/2013 @ 6pm: 
+-- I added the trackID to Song so that we can more easily 
+-- list the track numbers when we display an album
+------------------------------------------------------------------------------------------------
 DROP DATABASE IF EXISTS MusicLibrary;
 CREATE DATABASE MusicLibrary;
 
@@ -105,11 +105,11 @@ CREATE TABLE Genre(
 
 );
 
-/* Genre 1: Rock */
+--  Genre 1: Rock 
 
 INSERT INTO Genre VALUES(1, "Rock");
 
-#############  Artists  #############
+--------------------------  Artists  --------------------------
 INSERT INTO Artist VALUES(100, "Imagine Dragons");
 INSERT INTO Artist VALUES(105, "Arcade Fire");
 INSERT INTO Artist VALUES(110, "Beatles");
@@ -121,7 +121,7 @@ INSERT INTO Artist VALUES(135, "Avenged Sevenfold");
 INSERT INTO Artist VALUES(140, "Lana Del Rey");
 INSERT INTO Artist VALUES(145, "Linkin Park");
 
-#############  Albums  #############
+--------------------------  Albums  --------------------------
 INSERT INTO Album VALUES(100, "Night Visions", 100, 1, 2012);
 INSERT INTO Album VALUES(105, "Reflektor", 105, 1, 2013);
 INSERT INTO Album VALUES(110, "On Air: Live At The BBC Volume 2", 110, 1, 2013);
@@ -133,7 +133,7 @@ INSERT INTO Album VALUES(135, "Hail to the King", 135, 1, 2013);
 INSERT INTO Album VALUES(140, "Born to Die", 140, 1, 2012);
 INSERT INTO Album VALUES(145, "Recharged", 145, 1, 2013);
 
-#############  Songs  #############
+--------------------------  Songs  --------------------------
 INSERT INTO Song VALUES(1000, "Radioactive", 100, 1, 100, 2012, 1);
 INSERT INTO Song VALUES(1001, "Tiptoe", 100, 1, 100, 2012, 2);
 INSERT INTO Song VALUES(1002, "It’s Time", 100, 1, 100, 2012, 3);
@@ -327,11 +327,11 @@ INSERT INTO Song VALUES(1180, "I’ll Be Gone (Schoolboy Remix)", 145, 1, 145, 2
 INSERT INTO Song VALUES(1181, "Until It Breaks (Money Mark Headphone Remix)", 145, 1, 145, 2013, 13);
 INSERT INTO Song VALUES(1182, "A Light That Never Comes (Rick Rubin Reboot)", 145, 1, 145, 2013, 14);
 
-/* Genre 2: Pop */
+--  Genre 2: Pop 
 
 INSERT INTO Genre VALUES(2, "Pop");
 
-#############  Artists  #############
+--------------------------  Artists  --------------------------
 INSERT INTO Artist VALUES(300, "Justin Timberlake");
 INSERT INTO Artist VALUES(305, "OneRepublic");
 INSERT INTO Artist VALUES(310, "Miley Cyrus");
@@ -342,7 +342,7 @@ INSERT INTO Artist VALUES(335, "Christina Aguilera");
 INSERT INTO Artist VALUES(340, "Carly Rae Jepsen");
 INSERT INTO Artist VALUES(345, "Taylor Swift");
 
-#############  Albums  #############
+--------------------------  Albums  --------------------------
 INSERT INTO Album VALUES(300, "The 20/20 Experience", 300, 2, 2013);
 INSERT INTO Album VALUES(305, "Native", 305, 2, 2013);
 INSERT INTO Album VALUES(310, "Bangerz", 310, 2, 2013);
@@ -354,7 +354,7 @@ INSERT INTO Album VALUES(335, "Lotus", 335, 2, 2012);
 INSERT INTO Album VALUES(340, "Curiosity", 340, 2, 2012);
 INSERT INTO Album VALUES(345, "Red", 345, 2, 2012);
 
-#############  Songs  #############
+--------------------------  Songs  --------------------------
 INSERT INTO Song VALUES(2801, "Pusher Love Girl", 300, 2, 300, 2013, 1);
 INSERT INTO Song VALUES(2802, "Suit & Tie feat. Jay-Z", 300, 2, 300, 2013, 2);
 INSERT INTO Song VALUES(2803, "Don't Hold the Wall", 300, 2, 300, 2013, 3);
@@ -388,7 +388,7 @@ INSERT INTO Song VALUES(3004, "4x4", 310, 2, 310, 2013, 4);
 INSERT INTO Song VALUES(3005, "My Darlin", 310, 2, 310, 2013, 5);
 INSERT INTO Song VALUES(3006, "Wrecking Ball", 310, 2, 310, 2013, 6);
 INSERT INTO Song VALUES(3007, "Love Money Party", 310, 2, 310, 2013, 7);
-INSERT INTO Song VALUES(3008, "#GETITRIGHT", 310, 2, 310, 2013, 8);
+INSERT INTO Song VALUES(3008, "--GETITRIGHT", 310, 2, 310, 2013, 8);
 INSERT INTO Song VALUES(3009, "Drive", 310, 2, 310, 2013, 9);
 INSERT INTO Song VALUES(3010, "FU", 310, 2, 310, 2013, 10);
 INSERT INTO Song VALUES(3011, "Do My Thang", 310, 2, 310, 2013, 11);
@@ -500,11 +500,11 @@ INSERT INTO Song VALUES(3619, "Treacherous", 345, 2, 345, 2012, 19);
 INSERT INTO Song VALUES(3620, "Red (demo)", 345, 2, 345, 2012, 20);
 INSERT INTO Song VALUES(3621, "State of Grace (acoustic version)", 345, 2, 345, 2012, 21);
 
-/* Genre 3: Metal */
+--  Genre 3: Metal 
 
 INSERT INTO Genre VALUES(3, "Metal");
 
-#############  Artists  #############
+--------------------------  Artists  --------------------------
 INSERT INTO Artist VALUES(500, "Metallica");
 INSERT INTO Artist VALUES(501, "Megadeth");
 INSERT INTO Artist VALUES(502, "Trivium");
@@ -514,7 +514,7 @@ INSERT INTO Artist VALUES(505, "Dream Theater");
 INSERT INTO Artist VALUES(506, "Scale the Summit");
 INSERT INTO Artist VALUES(507, "John Petrucci");
 
-#############  Albums  #############
+--------------------------  Albums  --------------------------
 INSERT INTO Album VALUES(500, "Ride the Lightning", 500, 3, 1984);
 INSERT INTO Album VALUES(501, "Master of Puppets", 500, 3, 1986);
 INSERT INTO Album VALUES(510, "Peace Sells...But Who's Buying?", 501, 3, 1986);
@@ -526,7 +526,7 @@ INSERT INTO Album VALUES(550, "Black Clouds and Silver Linings", 505, 3, 2009);
 Insert INTO Album VALUES(560, "The Migration", 506, 3, 2013);
 INSERT INTO Album VALUES(570, "Suspended Animation", 507, 3, 2005);
 
-#############  Songs  #############
+--------------------------  Songs  --------------------------
 INSERT INTO Song VALUES(5000, "Fight Fire With Fire", 500, 3, 500, 1984, 1);
 INSERT INTO Song VALUES(5001, "Ride the Lightning", 500, 3, 500, 1984, 2);
 INSERT INTO Song VALUES(5002, "For Whom the Bell Tolls", 500, 3, 500, 1984, 3);
@@ -632,11 +632,11 @@ INSERT INTO Song VALUES(5092, "Curve", 507, 3, 570, 2005, 6);
 INSERT INTO Song VALUES(5093, "Lost Without You", 507, 3, 570, 2005, 7);
 INSERT INTO Song VALUES(5094, "Animate-Inanimate", 507, 3, 570, 2005, 8);
 
-/* Genre 4: Electronic */
+--  Genre 4: Electronic 
 
 INSERT INTO Genre VALUES(4, "Electronic");
 
-#############  Artists  #############
+--------------------------  Artists  --------------------------
 INSERT INTO Artist VALUES(641, "Skrillex");
 INSERT INTO Artist VALUES(642, "Daft Punk");
 INSERT INTO Artist VALUES(643, "Moby");
@@ -646,7 +646,7 @@ INSERT INTO Artist VALUES(646, "Bassnectar");
 INSERT INTO Artist VALUES(647, "Orbital");
 
 
-#############  Albums  #############
+--------------------------  Albums  --------------------------
 INSERT INTO Album VALUES(643, "Bangarang", 641, 4, 2012);
 INSERT INTO Album VALUES(644, "Scary Monsters and Nice Sprites", 641, 4, 2010);
 INSERT INTO Album VALUES(645, "Human After All", 642, 4, 2005);
@@ -658,7 +658,7 @@ INSERT INTO Album VALUES(641, "The Altogether", 647, 4, 2001);
 INSERT INTO Album VALUES(642, "Blue Album", 647, 4, 2001);
 
 
-#############  Songs  #############
+--------------------------  Songs  --------------------------
 
 INSERT INTO Song VALUES(6421, "Right in", 641, 4, 643, 2012, 1);
 INSERT INTO Song VALUES(6422, "Bangarang", 641, 4, 643, 2012, 2);
@@ -761,11 +761,11 @@ INSERT INTO Song VALUES(6418, "Acid Pants", 647, 4, 642, 2004, 7);
 INSERT INTO Song VALUES(6419, "Easy Serv", 647, 4, 642, 2004, 8);
 INSERT INTO Song VALUES(6420, "One Perfect Sunrise", 647, 4, 642, 2004, 9);
 
-/* Genre 5: Country */
+--  Genre 5: Country 
 
 INSERT INTO Genre VALUES(5, "Country");
 
-#############  Artists  #############
+--------------------------  Artists  --------------------------
 INSERT INTO Artist VALUES(900, "Blake Shelton");
 INSERT INTO Artist VALUES(901, "Luke Bryan");
 INSERT INTO Artist VALUES(902, "Taylor Swift");
@@ -775,7 +775,7 @@ INSERT INTO Artist VALUES(905, "Miranda Lambert");
 INSERT INTO Artist VALUES(906, "Hunter Hayes");
 INSERT INTO Artist VALUES(907, "Darius Rucker");
 
-#############  Albums  #############
+--------------------------  Albums  --------------------------
 INSERT INTO Album VALUES(900, "Based On A True Story", 900, 5, 2013);
 INSERT INTO Album VALUES(901, "Doin' My Thing", 901, 5, 2009);
 INSERT INTO Album VALUES(902, "Fearless", 902, 5, 2008);
@@ -788,7 +788,7 @@ INSERT INTO Album VALUES(908, "Blown Away", 903, 5, 2012);
 INSERT INTO Album VALUES(909, "My Kinda Party", 904, 5, 2010);
 
 
-#############  Songs  #############
+--------------------------  Songs  --------------------------
 INSERT INTO Song VALUES(9000, "Boys 'Round Here", 900, 5, 900, 2013, 1);
 INSERT INTO Song VALUES(9001, "Sure Be Cool If You Did", 900, 5, 900, 2013, 2);
 INSERT INTO Song VALUES(9002, "Do You Remember", 900, 5, 900, 2013, 3);
@@ -928,9 +928,9 @@ INSERT INTO Song VALUES(9126, "See You When I See You", 904, 5, 909, 2010, 13);
 INSERT INTO Song VALUES(9127, "If She Could See Me Now", 904, 5, 909, 2010, 14);
 INSERT INTO Song VALUES(9128, "Days Like These", 904, 5, 909, 2010, 15);
 
-/* AlbumArt */
+--  AlbumArt 
 
-###########  AlbumArt Rock  #########
+----------------------  AlbumArt Rock  ------------------
 INSERT INTO AlbumArt VALUES(100,100,"/img/AlbumArt/Rock/imagineDragonsNightVisions_1651x1451.jpg");
 INSERT INTO AlbumArt VALUES(105,105,"/img/AlbumArt/Rock/arcadeFireReflektor_500x500.jpg");
 INSERT INTO AlbumArt VALUES(110,110,"/img/AlbumArt/Rock/beatlesOnAirLiveAtTheBBCVolume2_1500x1375.jpg");
@@ -942,7 +942,7 @@ INSERT INTO AlbumArt VALUES(135,135,"/img/AlbumArt/Rock/avengedSevenfoldHailToTh
 INSERT INTO AlbumArt VALUES(140,140,"/img/AlbumArt/Rock/lanaDelReyBornTiDie_960x960.jpg");
 INSERT INTO AlbumArt VALUES(145,145,"/img/AlbumArt/Rock/linkinParkRecharged1200x1200.png");
 
-###########  AlbumArt Pop  ##########
+----------------------  AlbumArt Pop  --------------------
 INSERT INTO AlbumArt VALUES(300,300,"/img/AlbumArt/Pop (450x450)/The 20 20 Experience.jpg");
 INSERT INTO AlbumArt VALUES(305,305,"/img/AlbumArt/Pop (450x450)/Native.jpg");
 INSERT INTO AlbumArt VALUES(310,310,"/img/AlbumArt/Pop (450x450)/Bangerz.jpg");
@@ -954,7 +954,7 @@ INSERT INTO AlbumArt VALUES(335,335,"/img/AlbumArt/Pop (450x450)/Lotus.jpg");
 INSERT INTO AlbumArt VALUES(340,340,"/img/AlbumArt/Pop (450x450)/Curiosity.jpg");
 INSERT INTO AlbumArt VALUES(345,345,"/img/AlbumArt/Pop (450x450)/Red.jpg");
 
-#########  AlbumArt Metal  ##########
+------------------  AlbumArt Metal  --------------------
 INSERT INTO AlbumArt VALUES(500,500,"/img/AlbumArt/Metal/Metallica Ride the Lightning.jpg");
 INSERT INTO AlbumArt VALUES(501,501,"/img/AlbumArt/Metal/Metallica Master of Puppets.jpg");
 INSERT INTO AlbumArt VALUES(510,510,"/img/AlbumArt/Metal/Megadeth Peace Sells But Whos Buying.jpg");
@@ -966,7 +966,7 @@ INSERT INTO AlbumArt VALUES(550,550,"/img/AlbumArt/Metal/Dream Theater Black Clo
 INSERT INTO AlbumArt VALUES(560,560,"/img/AlbumArt/Metal/Scale the Summit The Migration.jpg");
 INSERT INTO AlbumArt VALUES(570,570,"/img/AlbumArt/Metal/John Petrucci Suspended Animation.png");
 
-#########  AlbumArt Techno  #########
+------------------  AlbumArt Techno  ------------------
 INSERT INTO AlbumArt VALUES(641,641,"/img/AlbumArt/Techno/orbital.jpg");
 INSERT INTO AlbumArt VALUES(642,642,"/img/AlbumArt/Techno/orbital2.jpg");
 INSERT INTO AlbumArt VALUES(643,643,"/img/AlbumArt/Techno/skrillex.jpg");
@@ -977,7 +977,7 @@ INSERT INTO AlbumArt VALUES(647,647,"/img/AlbumArt/Techno/datsik.jpg");
 INSERT INTO AlbumArt VALUES(648,648,"/img/AlbumArt/Techno/excision.jpg");
 INSERT INTO AlbumArt VALUES(649,649,"/img/AlbumArt/Techno/bassnectar.jpg");
 
-########  AlbumArt Country  #########
+----------------  AlbumArt Country  ------------------
 INSERT INTO AlbumArt VALUES(900,900,"/img/AlbumArt/Country/Based On A True Story.jpg");
 INSERT INTO AlbumArt VALUES(901,901,"/img/AlbumArt/Country/Doin' My Thing.jpg");
 INSERT INTO AlbumArt VALUES(902,902,"/img/AlbumArt/Country/Fearless.jpg");
