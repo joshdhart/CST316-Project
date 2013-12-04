@@ -108,3 +108,6 @@ C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\Mic
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.dll
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.pdb
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\MySql.Data.dll
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\MySql.Data.Entity.dll
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\MySql.Web.dll
