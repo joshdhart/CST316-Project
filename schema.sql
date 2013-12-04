@@ -20,7 +20,10 @@ appropriate sections.
 I added the trackID to Song so that we can more easily 
 list the track numbers when we display an album
 ------------------------------------------------------------------------------------------------*/
+DROP DATABASE IF EXISTS MusicLibrary;
+CREATE DATABASE MusicLibrary;
 
+USE MusicLibrary;
 
 DROP TABLE IF EXISTS Album;
 
