@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MusicLibrary.Models.Song>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.releaseYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trackNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.releaseYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trackNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Album.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artist.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Genre.type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.songID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.songID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.songID })
+        </td>
+    </tr>
+}
+
+</table>

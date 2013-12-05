@@ -1,0 +1,89 @@
+﻿@model MusicLibrary.Models.Song
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Song</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.songID, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.songID)
+                @Html.ValidationMessageFor(model => model.songID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.artistID, "artistID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("artistID", String.Empty)
+                @Html.ValidationMessageFor(model => model.artistID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.genreID, "genreID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("genreID", String.Empty)
+                @Html.ValidationMessageFor(model => model.genreID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.albumID, "albumID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("albumID", String.Empty)
+                @Html.ValidationMessageFor(model => model.albumID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.releaseYear, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.releaseYear)
+                @Html.ValidationMessageFor(model => model.releaseYear)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trackNum, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trackNum)
+                @Html.ValidationMessageFor(model => model.trackNum)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

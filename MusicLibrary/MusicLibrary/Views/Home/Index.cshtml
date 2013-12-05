@@ -1,4 +1,4 @@
-﻿@model List<MusicLibrary.Models.Album>
+﻿@model IEnumerable<MusicLibrary.Models.Album>
 
 @{
     ViewBag.Title = "Home Page";
@@ -11,13 +11,14 @@
 
 
 <div>
-    <ul title="Albums">
-        @*@foreach (var album in Model)
+    @*<ul title="Albums">
+        @foreach (var item in Model)
         {
-            <li>
-                <img alt="@album.name" src="@album.AlbumArts" />
-                <span>@album.name</span>
+            <li><a href="@Url.Action("Details", "Albums", new { id = item.albumID })">
+                    <img src="~/img/Letter_Tiles/Letter_Tiles_Small/A_Tile_145x145.png" />
+                <span>@Html.DisplayFor(modelItem => item.name)</span>
+                </a>
             </li>
-        }*@
-    </ul>
+        }
+    </ul>*@
 </div>
