@@ -1,0 +1,40 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Album] (Table)
+       [dbo].[AlbumArt] (Table)
+       [dbo].[Artist] (Table)
+       [dbo].[Genre] (Table)
+       [dbo].[Playlist] (Table)
+       [dbo].[Song] (Table)
+       Default Constraint on [dbo].[Album].[artistID] (Default Constraint)
+       Default Constraint on [dbo].[Album].[genreID] (Default Constraint)
+       Default Constraint on [dbo].[Album].[releaseYear] (Default Constraint)
+       Default Constraint on [dbo].[Playlist].[artistID] (Default Constraint)
+       Default Constraint on [dbo].[Playlist].[albumID] (Default Constraint)
+       Default Constraint on [dbo].[Playlist].[genreID] (Default Constraint)
+       Default Constraint on [dbo].[Song].[artistID] (Default Constraint)
+       Default Constraint on [dbo].[Song].[genreID] (Default Constraint)
+       Default Constraint on [dbo].[Song].[albumID] (Default Constraint)
+       Default Constraint on [dbo].[Song].[releaseYear] (Default Constraint)
+       Default Constraint on [dbo].[Song].[trackNum] (Default Constraint)
+       Foreign Key on [dbo].[Album].[artistID] (Foreign Key)
+       Foreign Key on [dbo].[Album].[genreID] (Foreign Key)
+       Foreign Key on [dbo].[AlbumArt].[albumID] (Foreign Key)
+       Foreign Key on [dbo].[Playlist].[artistID] (Foreign Key)
+       Foreign Key on [dbo].[Playlist].[albumID] (Foreign Key)
+       Foreign Key on [dbo].[Playlist].[genreID] (Foreign Key)
+       Foreign Key on [dbo].[Song].[artistID] (Foreign Key)
+       Foreign Key on [dbo].[Song].[genreID] (Foreign Key)
+       Foreign Key on [dbo].[Song].[albumID] (Foreign Key)
+
+** Supporting actions

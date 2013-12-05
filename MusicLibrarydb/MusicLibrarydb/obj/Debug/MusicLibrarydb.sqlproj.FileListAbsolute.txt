@@ -1,0 +1,10 @@
+C:\Users\Chase\Desktop\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.dacpac
+C:\Users\Chase\Desktop\MusicLibrarydb\MusicLibrarydb\obj\Debug\MusicLibrarydb.dll
+C:\Users\Chase\Desktop\MusicLibrarydb\MusicLibrarydb\obj\Debug\MusicLibrarydb.pdb
+C:\Users\Chase\Desktop\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.dll
+C:\Users\Chase\Desktop\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.pdb
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.dacpac
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.dll
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrarydb\MusicLibrarydb\bin\Debug\MusicLibrarydb.pdb
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrarydb\MusicLibrarydb\obj\Debug\MusicLibrarydb.dll
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrarydb\MusicLibrarydb\obj\Debug\MusicLibrarydb.pdb

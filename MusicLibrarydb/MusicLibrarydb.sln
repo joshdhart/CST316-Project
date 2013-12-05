@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MusicLibrarydb", "MusicLibrarydb\MusicLibrarydb.sqlproj", "{ADB8AC68-EC8A-4358-BE4A-1F9725831133}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB8AC68-EC8A-4358-BE4A-1F9725831133}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
