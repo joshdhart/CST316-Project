@@ -10,15 +10,16 @@
 </div>
 
 
-<div>
-    @*<ul title="Albums">
-        @foreach (var item in Model)
-        {
-            <li><a href="@Url.Action("Details", "Albums", new { id = item.albumID })">
-                    <img src="~/img/Letter_Tiles/Letter_Tiles_Small/A_Tile_145x145.png" />
-                <span>@Html.DisplayFor(modelItem => item.name)</span>
-                </a>
-            </li>
-        }
-    </ul>*@
+<div class="row">
+    
+            @foreach (var album in Model)
+{
+    <div class="col-xs-6 col-md-3">
+        <a href="@Url.Action("Details", "Album", new { id = album.albumID })" class="thumbnail">
+            <img alt="@album.name" src="~/img/AlbumArt/Metal/Metallica%20Master%20of%20Puppets.jpg" />
+            <span>@Html.DisplayFor(modelItem => album.name)</span>
+        </a>
+    </div>
+} 
+    
 </div>
