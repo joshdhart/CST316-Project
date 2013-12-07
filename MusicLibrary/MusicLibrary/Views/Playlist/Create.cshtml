@@ -25,26 +25,18 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.artistID, "artistID", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.playlistName, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("artistID", String.Empty)
-                @Html.ValidationMessageFor(model => model.artistID)
+                @Html.EditorFor(model => model.playlistName)
+                @Html.ValidationMessageFor(model => model.playlistName)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.albumID, "albumID", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.songID, "songID", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("albumID", String.Empty)
-                @Html.ValidationMessageFor(model => model.albumID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.genreID, "genreID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("genreID", String.Empty)
-                @Html.ValidationMessageFor(model => model.genreID)
+                @Html.DropDownList("songID", String.Empty)
+                @Html.ValidationMessageFor(model => model.songID)
             </div>
         </div>
 

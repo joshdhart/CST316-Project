@@ -48,7 +48,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="playlistID,songID")] Playlist playlist)
+        public ActionResult Create([Bind(Include="playlistID,playlistName,songID")] Playlist playlist)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="playlistID,songID")] Playlist playlist)
+        public ActionResult Edit([Bind(Include="playlistID,playlistName,songID")] Playlist playlist)
         {
             if (ModelState.IsValid)
             {

@@ -11,27 +11,19 @@
 	<hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Album.name)
+            @Html.DisplayNameFor(model => model.playlistName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Album.name)
+            @Html.DisplayFor(model => model.playlistName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Artist.name)
+            @Html.DisplayNameFor(model => model.Song.title)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Artist.name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre.type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Genre.type)
+            @Html.DisplayFor(model => model.Song.title)
         </dd>
 
     </dl>
