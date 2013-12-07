@@ -16,7 +16,7 @@ namespace MusicLibrary.Controllers
 
         public ActionResult Index()
         {
-            var albumitems = musicLibraryDB.Albums.Include(i => i.AlbumArts);
+            var albumitems = musicLibraryDB.Albums.OrderBy(i => i.name).Include(i => i.AlbumArts);
             return View(albumitems.ToList());
         }
 
