@@ -14,12 +14,10 @@
         <AssociationConnector Association="MusicLibraryDBModel.FK__Album__artistID__412EB0B6" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Album__genreID__4222D4EF" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__AlbumArt__albumI__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="MusicLibraryDBModel.FK__Playlist__albumI__44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__albumID__48CFD27E" ManuallyRouted="false" />
-        <AssociationConnector Association="MusicLibraryDBModel.FK__Playlist__artist__440B1D61" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__artistID__46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="MusicLibraryDBModel.FK__Playlist__genreI__45F365D3" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__genreID__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicLibraryDBModel.FK_Playlist_song" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

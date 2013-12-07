@@ -17,7 +17,6 @@ namespace MusicLibrary.Models
         public Genre()
         {
             this.Albums = new HashSet<Album>();
-            this.Playlists = new HashSet<Playlist>();
             this.Songs = new HashSet<Song>();
         }
     
@@ -25,7 +24,6 @@ namespace MusicLibrary.Models
         public string type { get; set; }
     
         public virtual ICollection<Album> Albums { get; set; }
-        public virtual ICollection<Playlist> Playlists { get; set; }
         public virtual ICollection<Song> Songs { get; set; }
     }
 }

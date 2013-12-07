@@ -173,16 +173,16 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Album.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\AlbumArt.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Artist.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Model1.Context.cs">
@@ -206,10 +206,10 @@
       <DependentUpon>MusicLibrayDBModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Playlist.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Song.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -335,6 +335,7 @@
     <Content Include="lightbox\assets\spacer.png" />
     <Content Include="lightbox\js\jquery.wt-lightbox.min.js" />
     <Content Include="lightbox\wt-lightbox.css" />
+    <Content Include="Models\MusicLibrayDBModel.edmx.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="img\AlbumArt\Country\desktop.ini" />
@@ -373,6 +374,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
       <DependentUpon>MusicLibrayDBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

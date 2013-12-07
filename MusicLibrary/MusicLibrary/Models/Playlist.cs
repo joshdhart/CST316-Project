@@ -15,12 +15,9 @@ namespace MusicLibrary.Models
     public partial class Playlist
     {
         public string playlistID { get; set; }
-        public Nullable<int> artistID { get; set; }
-        public Nullable<int> albumID { get; set; }
-        public Nullable<int> genreID { get; set; }
+        public string playlistName { get; set; }
+        public Nullable<int> songID { get; set; }
     
-        public virtual Album Album { get; set; }
-        public virtual Artist Artist { get; set; }
-        public virtual Genre Genre { get; set; }
+        public virtual Song Song { get; set; }
     }
 }
