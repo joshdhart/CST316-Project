@@ -220,8 +220,8 @@
     <Content Include="assets\spacer.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\grid-slider.css" />
-    <Content Include="css\preview.css" />
+    <Content Include="Content\grid-slider.css" />
+    <Content Include="Content\preview.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -333,8 +333,8 @@
     <Content Include="lightbox\assets\icons.png" />
     <Content Include="lightbox\assets\loader.gif" />
     <Content Include="lightbox\assets\spacer.png" />
-    <Content Include="lightbox\js\jquery.wt-lightbox.min.js" />
-    <Content Include="lightbox\wt-lightbox.css" />
+    <Content Include="Scripts\jquery.wt-lightbox.min.js" />
+    <Content Include="Content\wt-lightbox.css" />
     <Content Include="Models\MusicLibrayDBModel.edmx.sql" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

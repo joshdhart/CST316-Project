@@ -17,7 +17,7 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/
         public ActionResult Index()
         {
-            var playlists = db.Playlists.Include(p => p.Album).Include(p => p.Artist).Include(p => p.Genre);
+            var playlists = db.Playlists.Include(p => p.Song);
             return View(playlists.ToList());
         }
 
@@ -39,9 +39,7 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/Create
         public ActionResult Create()
         {
-            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name");
-            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name");
-            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type");
+            ViewBag.songID = new SelectList(db.Songs, "songID", "title");
             return View();
         }
 
@@ -50,7 +48,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="playlistID,artistID,albumID,genreID")] Playlist playlist)
+        public ActionResult Create([Bind(Include="playlistID,songID")] Playlist playlist)
         {
             if (ModelState.IsValid)
             {
@@ -59,9 +57,7 @@ namespace MusicLibrary.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", playlist.albumID);
-            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", playlist.artistID);
-            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", playlist.genreID);
+            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 
@@ -77,9 +73,7 @@ namespace MusicLibrary.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", playlist.albumID);
-            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", playlist.artistID);
-            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", playlist.genreID);
+            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 
@@ -88,7 +82,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="playlistID,artistID,albumID,genreID")] Playlist playlist)
+        public ActionResult Edit([Bind(Include="playlistID,songID")] Playlist playlist)
         {
             if (ModelState.IsValid)
             {
@@ -96,9 +90,7 @@ namespace MusicLibrary.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", playlist.albumID);
-            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", playlist.artistID);
-            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", playlist.genreID);
+            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 
