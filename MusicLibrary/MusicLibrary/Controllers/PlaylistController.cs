@@ -17,8 +17,7 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/
         public ActionResult Index()
         {
-            var playlists = db.Playlists.Include(p => p.Song);
-            return View(playlists.ToList());
+            return View(db.Playlists.ToList());
         }
 
         // GET: /Playlist/Details/5
@@ -39,7 +38,6 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/Create
         public ActionResult Create()
         {
-            ViewBag.songID = new SelectList(db.Songs, "songID", "title");
             return View();
         }
 
@@ -57,7 +55,6 @@ namespace MusicLibrary.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 
@@ -73,7 +70,6 @@ namespace MusicLibrary.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 
@@ -90,7 +86,6 @@ namespace MusicLibrary.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.songID = new SelectList(db.Songs, "songID", "title", playlist.songID);
             return View(playlist);
         }
 

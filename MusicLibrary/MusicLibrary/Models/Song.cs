@@ -14,11 +14,6 @@ namespace MusicLibrary.Models
     
     public partial class Song
     {
-        public Song()
-        {
-            this.Playlists = new HashSet<Playlist>();
-        }
-    
         public int songID { get; set; }
         public string title { get; set; }
         public Nullable<int> artistID { get; set; }
@@ -26,10 +21,11 @@ namespace MusicLibrary.Models
         public Nullable<int> albumID { get; set; }
         public Nullable<int> releaseYear { get; set; }
         public Nullable<int> trackNum { get; set; }
+        public string Playlist_playlistID { get; set; }
     
         public virtual Album Album { get; set; }
         public virtual Artist Artist { get; set; }
         public virtual Genre Genre { get; set; }
-        public virtual ICollection<Playlist> Playlists { get; set; }
+        public virtual Playlist Playlist { get; set; }
     }
 }

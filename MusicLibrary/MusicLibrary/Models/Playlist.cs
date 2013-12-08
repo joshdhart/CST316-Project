@@ -14,10 +14,15 @@ namespace MusicLibrary.Models
     
     public partial class Playlist
     {
+        public Playlist()
+        {
+            this.Songs = new HashSet<Song>();
+        }
+    
         public string playlistID { get; set; }
         public string playlistName { get; set; }
         public Nullable<int> songID { get; set; }
     
-        public virtual Song Song { get; set; }
+        public virtual ICollection<Song> Songs { get; set; }
     }
 }

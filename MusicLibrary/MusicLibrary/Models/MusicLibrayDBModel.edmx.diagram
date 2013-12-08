@@ -17,7 +17,7 @@
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__albumID__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__artistID__46E78A0C" ManuallyRouted="false" />
         <AssociationConnector Association="MusicLibraryDBModel.FK__Song__genreID__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="MusicLibraryDBModel.FK_Playlist_song" />
+        <AssociationConnector Association="MusicLibraryDBModel.PlaylistSong" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -6,7 +6,35 @@
 
 <h2>Details</h2>
 
-<div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="thumbnail">
+            <img alt="@Model.name" src="@Model.AlbumArts.First().url" />
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div>
+            <div>
+            <h1>@Html.DisplayFor(model => model.name)</h1>
+                <div>
+                    @foreach (var song in Model.Songs)
+                    {
+                    <ul>
+                        <li>
+                            @Html.DisplayFor(model => song.title)
+                        </li>
+                    </ul>
+                    }
+                </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+@*<div>
     <h4>Album</h4>
 	<hr />
     <dl class="dl-horizontal">
@@ -43,8 +71,8 @@
         </dd>
 
     </dl>
-</div>
-<p>
+</div>*@
+@*<p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.albumID }) |
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p>*@

@@ -36,9 +36,9 @@
       <End Role="Genre" EntitySet="Genres" />
       <End Role="Song" EntitySet="Songs" />
     </AssociationSet>
-    <AssociationSet Name="FK_Playlist_song" Association="MusicLibraryDBModel.Store.FK_Playlist_song">
-      <End Role="Song" EntitySet="Songs" />
+    <AssociationSet Name="PlaylistSong" Association="MusicLibraryDBModel.Store.PlaylistSong">
       <End Role="Playlist" EntitySet="Playlists" />
+      <End Role="Song" EntitySet="Songs" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Albums">
@@ -92,6 +92,7 @@
     <Property Name="albumID" Type="int" Nullable="true" />
     <Property Name="releaseYear" Type="int" Nullable="true" />
     <Property Name="trackNum" Type="int" Nullable="true" />
+    <Property Name="Playlist_playlistID" Type="varchar" Nullable="true" MaxLength="255" />
   </EntityType>
   <Association Name="FK__Album__artistID__412EB0B6">
     <End Role="Artist" Type="MusicLibraryDBModel.Store.Artists" Multiplicity="0..1" />
@@ -165,15 +166,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Playlist_song">
-    <End Role="Song" Type="MusicLibraryDBModel.Store.Songs" Multiplicity="0..1" />
-    <End Role="Playlist" Type="MusicLibraryDBModel.Store.Playlists" Multiplicity="*" />
+  <Association Name="PlaylistSong">
+    <End Role="Playlist" Type="MusicLibraryDBModel.Store.Playlists" Multiplicity="0..1" />
+    <End Role="Song" Type="MusicLibraryDBModel.Store.Songs" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Song">
-        <PropertyRef Name="songID" />
+      <Principal Role="Playlist">
+        <PropertyRef Name="playlistID" />
       </Principal>
-      <Dependent Role="Playlist">
-        <PropertyRef Name="songID" />
+      <Dependent Role="Song">
+        <PropertyRef Name="Playlist_playlistID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -229,7 +230,7 @@
           <Property Name="playlistID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="playlistName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="songID" Type="Int32" />
-          <NavigationProperty Name="Song" Relationship="MusicLibraryDBModel.FK_Playlist_song" FromRole="Playlist" ToRole="Song" />
+          <NavigationProperty Name="Songs" Relationship="MusicLibraryDBModel.PlaylistSong" FromRole="Playlist" ToRole="Song" />
         </EntityType>
         <EntityType Name="Song">
           <Key>
@@ -245,7 +246,8 @@
           <NavigationProperty Name="Album" Relationship="Self.FK__Song__albumID__48CFD27E" FromRole="Song" ToRole="Album" />
           <NavigationProperty Name="Artist" Relationship="Self.FK__Song__artistID__46E78A0C" FromRole="Song" ToRole="Artist" />
           <NavigationProperty Name="Genre" Relationship="Self.FK__Song__genreID__47DBAE45" FromRole="Song" ToRole="Genre" />
-          <NavigationProperty Name="Playlists" Relationship="MusicLibraryDBModel.FK_Playlist_song" FromRole="Song" ToRole="Playlist" />
+          <NavigationProperty Name="Playlist" Relationship="MusicLibraryDBModel.PlaylistSong" FromRole="Song" ToRole="Playlist" />
+          <Property Name="Playlist_playlistID" Type="String" Nullable="true" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK__Album__artistID__412EB0B6">
           <End Role="Artist" Type="Self.Artist" Multiplicity="0..1" />
@@ -350,20 +352,20 @@
             <End Role="Genre" EntitySet="Genres" />
             <End Role="Song" EntitySet="Songs" />
           </AssociationSet>
-          <AssociationSet Name="FK_Playlist_song" Association="MusicLibraryDBModel.FK_Playlist_song">
-            <End Role="Song" EntitySet="Songs" />
+          <AssociationSet Name="PlaylistSong" Association="MusicLibraryDBModel.PlaylistSong">
             <End Role="Playlist" EntitySet="Playlists" />
+            <End Role="Song" EntitySet="Songs" />
           </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Playlist_song">
-          <End Type="MusicLibraryDBModel.Song" Role="Song" Multiplicity="0..1" />
-          <End Type="MusicLibraryDBModel.Playlist" Role="Playlist" Multiplicity="*" />
+        <Association Name="PlaylistSong">
+          <End Type="MusicLibraryDBModel.Playlist" Role="Playlist" Multiplicity="0..1" />
+          <End Type="MusicLibraryDBModel.Song" Role="Song" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Song">
-              <PropertyRef Name="songID" />
+            <Principal Role="Playlist">
+              <PropertyRef Name="playlistID" />
             </Principal>
-            <Dependent Role="Playlist">
-              <PropertyRef Name="songID" />
+            <Dependent Role="Song">
+              <PropertyRef Name="Playlist_playlistID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -428,6 +430,7 @@
           <ScalarProperty Name="albumID" ColumnName="albumID" />
           <ScalarProperty Name="releaseYear" ColumnName="releaseYear" />
           <ScalarProperty Name="trackNum" ColumnName="trackNum" />
+          <ScalarProperty Name="Playlist_playlistID" ColumnName="Playlist_playlistID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.playlistName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Song.title)
+            @Html.DisplayNameFor(model => model.songID)
         </th>
         <th></th>
     </tr>
@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.playlistName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Song.title)
+            @Html.DisplayFor(modelItem => item.songID)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.playlistID }) |

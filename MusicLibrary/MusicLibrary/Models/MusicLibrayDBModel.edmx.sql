@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/06/2013 23:19:55
--- Generated from EDMX file: C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\Models\MusicLibrayDBModel.edmx
+-- Date Created: 12/07/2013 21:05:14
+-- Generated from EDMX file: C:\Users\Chase\Dropbox\MusicLibrary\MusicLibrary\Models\MusicLibrayDBModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -18,48 +18,48 @@ GO
 -- --------------------------------------------------
 
 IF OBJECT_ID(N'[dbo].[FK__Album__artistID__412EB0B6]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Album] DROP CONSTRAINT [FK__Album__artistID__412EB0B6];
+    ALTER TABLE [dbo].[Albums] DROP CONSTRAINT [FK__Album__artistID__412EB0B6];
 GO
 IF OBJECT_ID(N'[dbo].[FK__Album__genreID__4222D4EF]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Album] DROP CONSTRAINT [FK__Album__genreID__4222D4EF];
+    ALTER TABLE [dbo].[Albums] DROP CONSTRAINT [FK__Album__genreID__4222D4EF];
 GO
 IF OBJECT_ID(N'[dbo].[FK__AlbumArt__albumI__4316F928]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[AlbumArt] DROP CONSTRAINT [FK__AlbumArt__albumI__4316F928];
+    ALTER TABLE [dbo].[AlbumArts] DROP CONSTRAINT [FK__AlbumArt__albumI__4316F928];
 GO
 IF OBJECT_ID(N'[dbo].[FK__Song__albumID__48CFD27E]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Song] DROP CONSTRAINT [FK__Song__albumID__48CFD27E];
+    ALTER TABLE [dbo].[Songs] DROP CONSTRAINT [FK__Song__albumID__48CFD27E];
 GO
 IF OBJECT_ID(N'[dbo].[FK__Song__artistID__46E78A0C]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Song] DROP CONSTRAINT [FK__Song__artistID__46E78A0C];
+    ALTER TABLE [dbo].[Songs] DROP CONSTRAINT [FK__Song__artistID__46E78A0C];
 GO
 IF OBJECT_ID(N'[dbo].[FK__Song__genreID__47DBAE45]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Song] DROP CONSTRAINT [FK__Song__genreID__47DBAE45];
+    ALTER TABLE [dbo].[Songs] DROP CONSTRAINT [FK__Song__genreID__47DBAE45];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Playlist_song]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Playlist] DROP CONSTRAINT [FK_Playlist_song];
+IF OBJECT_ID(N'[dbo].[FK_PlaylistSong]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Songs] DROP CONSTRAINT [FK_PlaylistSong];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[Album]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Album];
+IF OBJECT_ID(N'[dbo].[Albums]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Albums];
 GO
-IF OBJECT_ID(N'[dbo].[AlbumArt]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[AlbumArt];
+IF OBJECT_ID(N'[dbo].[AlbumArts]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[AlbumArts];
 GO
-IF OBJECT_ID(N'[dbo].[Artist]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Artist];
+IF OBJECT_ID(N'[dbo].[Artists]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Artists];
 GO
-IF OBJECT_ID(N'[dbo].[Genre]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Genre];
+IF OBJECT_ID(N'[dbo].[Genres]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Genres];
 GO
-IF OBJECT_ID(N'[dbo].[Playlist]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Playlist];
+IF OBJECT_ID(N'[dbo].[Playlists]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Playlists];
 GO
-IF OBJECT_ID(N'[dbo].[Song]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Song];
+IF OBJECT_ID(N'[dbo].[Songs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Songs];
 GO
 
 -- --------------------------------------------------
@@ -114,7 +114,8 @@ CREATE TABLE [dbo].[Songs] (
     [genreID] int  NULL,
     [albumID] int  NULL,
     [releaseYear] int  NULL,
-    [trackNum] int  NULL
+    [trackNum] int  NULL,
+    [Playlist_playlistID] varchar(255)  NULL
 );
 GO
 
@@ -246,18 +247,18 @@ ON [dbo].[Songs]
     ([genreID]);
 GO
 
--- Creating foreign key on [songID] in table 'Playlists'
-ALTER TABLE [dbo].[Playlists]
-ADD CONSTRAINT [FK_Playlist_song]
-    FOREIGN KEY ([songID])
-    REFERENCES [dbo].[Songs]
-        ([songID])
+-- Creating foreign key on [Playlist_playlistID] in table 'Songs'
+ALTER TABLE [dbo].[Songs]
+ADD CONSTRAINT [FK_PlaylistSong]
+    FOREIGN KEY ([Playlist_playlistID])
+    REFERENCES [dbo].[Playlists]
+        ([playlistID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
--- Creating non-clustered index for FOREIGN KEY 'FK_Playlist_song'
-CREATE INDEX [IX_FK_Playlist_song]
-ON [dbo].[Playlists]
-    ([songID]);
+-- Creating non-clustered index for FOREIGN KEY 'FK_PlaylistSong'
+CREATE INDEX [IX_FK_PlaylistSong]
+ON [dbo].[Songs]
+    ([Playlist_playlistID]);
 GO
 
 -- --------------------------------------------------

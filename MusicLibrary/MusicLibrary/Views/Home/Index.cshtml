@@ -7,6 +7,34 @@
 
 <div class="jumbotron">
     <h1>my music</h1>
+
+    @*<table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <a href="/?sort=artistID&amp;sortdir=ASC">Artist  </a>
+                </th>
+                <th scope="col">
+                    <a href="/?sort=ReleaseDate&amp;sortdir=ASC">B</a>
+                </th>
+                <th scope="col">
+                    <a href="/?sort=Genre&amp;sortdir=ASC">C</a>
+                </th>
+                <th scope="col">
+                    <a href="/?sort=Rating&amp;sortdir=DESC">D</a>
+                </th>
+                <th scope="col">
+                    <a href="/?sort=MovieDirector.DirectorName&amp;sortdir=ASC">E</a>
+                </th>
+                <th scope="col">
+                    <a href="/?sort=MovieDirector.DirectorBirthdate&amp;sortdir=ASC">F</a>
+                </th>
+                <th scope="col">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+    </table>*@
 </div>
 
 
@@ -16,7 +44,7 @@
 {
     <div class="col-xs-6 col-md-3">
         <a href="@Url.Action("Details", "Album", new { id = album.albumID })" class="thumbnail">
-            <img alt="@album.name" src="" />
+            <img alt="@album.name" src="@album.AlbumArts.First().url" />
             <span>@Html.DisplayFor(modelItem => album.name)</span>
         </a>
     </div>
