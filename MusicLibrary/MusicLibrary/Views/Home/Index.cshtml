@@ -4,50 +4,94 @@
     ViewBag.Title = "Home Page";
 }
 
-
 <div class="jumbotron">
     <h1>my music</h1>
+    <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li>@Html.ActionLink("artist", "Index", "Artist")</li>
+            <li class="active">@Html.ActionLink("album", "Index", "Home")</li>
+            <li>@Html.ActionLink("song", "Index", "Song")</li>
+            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
+        </ul>
+    </div>
+</div>
 
     @*<table>
-        <thead>
-            <tr>
-                <th scope="col">
-                    <a href="/?sort=artistID&amp;sortdir=ASC">Artist  </a>
-                </th>
-                <th scope="col">
-                    <a href="/?sort=ReleaseDate&amp;sortdir=ASC">B</a>
-                </th>
-                <th scope="col">
-                    <a href="/?sort=Genre&amp;sortdir=ASC">C</a>
-                </th>
-                <th scope="col">
-                    <a href="/?sort=Rating&amp;sortdir=DESC">D</a>
-                </th>
-                <th scope="col">
-                    <a href="/?sort=MovieDirector.DirectorName&amp;sortdir=ASC">E</a>
-                </th>
-                <th scope="col">
-                    <a href="/?sort=MovieDirector.DirectorBirthdate&amp;sortdir=ASC">F</a>
-                </th>
-                <th scope="col">
-                    Actions
-                </th>
-            </tr>
-        </thead>
-    </table>*@
+            <thead>
+                <tr>
+                    <th scope="col">
+                        <a href="/?sort=artistID&amp;sortdir=ASC">Artist  </a>
+                    </th>
+                    <th scope="col">
+                        <a href="/?sort=ReleaseDate&amp;sortdir=ASC">B</a>
+                    </th>
+                    <th scope="col">
+                        <a href="/?sort=Genre&amp;sortdir=ASC">C</a>
+                    </th>
+                    <th scope="col">
+                        <a href="/?sort=Rating&amp;sortdir=DESC">D</a>
+                    </th>
+                    <th scope="col">
+                        <a href="/?sort=MovieDirector.DirectorName&amp;sortdir=ASC">E</a>
+                    </th>
+                    <th scope="col">
+                        <a href="/?sort=MovieDirector.DirectorBirthdate&amp;sortdir=ASC">F</a>
+                    </th>
+                    <th scope="col">
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+        </table>*@
+
+<div class="btn-group btn-group-justified">
+
+    <a class="btn btn-default btn-xs" role="button">a</a>
+    <a class="btn btn-default btn-xs" role="button">b</a>
+    <a class="btn btn-default btn-xs" role="button">c</a>
+    <a class="btn btn-default btn-xs" role="button">d</a>
+    <a class="btn btn-default btn-xs" role="button">e</a>
+    <a class="btn btn-default btn-xs" role="button">f</a>
+    <a class="btn btn-default btn-xs" role="button">g</a>
+    <a class="btn btn-default btn-xs" role="button">h</a>
+    <a class="btn btn-default btn-xs" role="button">i</a>
+    <a class="btn btn-default btn-xs" role="button">j</a>
+    <a class="btn btn-default btn-xs" role="button">k</a>
+    <a class="btn btn-default btn-xs" role="button">l</a>
+    <a class="btn btn-default btn-xs" role="button">m</a>
+    <a class="btn btn-default btn-xs" role="button">n</a>
+    <a class="btn btn-default btn-xs" role="button">o</a>
+    <a class="btn btn-default btn-xs" role="button">p</a>
+    <a class="btn btn-default btn-xs" role="button">q</a>
+    <a class="btn btn-default btn-xs" role="button">r</a>
+    <a class="btn btn-default btn-xs" role="button">s</a>
+    <a class="btn btn-default btn-xs" role="button">t</a>
+    <a class="btn btn-default btn-xs" role="button">u</a>
+    <a class="btn btn-default btn-xs" role="button">v</a>
+    <a class="btn btn-default btn-xs" role="button">w</a>
+    <a class="btn btn-default btn-xs" role="button">x</a>
+    <a class="btn btn-default btn-xs" role="button">y</a>
+    <a class="btn btn-default btn-xs" role="button">z</a>
+    <a class="btn btn-default btn-xs" role="button">#</a>
+
 </div>
 
 
 <div class="row">
-    
-            @foreach (var album in Model)
-{
-    <div class="col-xs-6 col-md-3">
-        <a href="@Url.Action("Details", "Album", new { id = album.albumID })" class="thumbnail">
-            <img alt="@album.name" src="@album.AlbumArts.First().url" />
-            <span>@Html.DisplayFor(modelItem => album.name)</span>
-        </a>
+
+    @foreach (var album in Model)
+    {
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
+                    <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
+                    <div class="caption">
+                        <h4>@Html.DisplayFor(modelItem => album.name)</h4>
+                        <p>@Html.DisplayFor(model => album.Artist.name)</p>
+                </div>
+            </a>
+        </div>
     </div>
-} 
-    
+    }
+
 </div>

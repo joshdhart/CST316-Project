@@ -6,6 +6,8 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicLibrary.Models
 {
@@ -20,6 +22,7 @@ namespace MusicLibrary.Models
         }
     
         public string playlistID { get; set; }
+        [DisplayName("Playlist")]
         public string playlistName { get; set; }
         public Nullable<int> songID { get; set; }
     

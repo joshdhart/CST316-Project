@@ -12,11 +12,11 @@ namespace MusicLibrary.Controllers
 {
     public class HomeController : Controller
     {
-        private MusicLibraryDBEntities musicLibraryDB = new MusicLibraryDBEntities();
+        private MusicLibraryDBEntities db = new MusicLibraryDBEntities();
 
         public ActionResult Index()
         {
-            var albumitems = musicLibraryDB.Albums.OrderBy(i => i.name).Include(i => i.AlbumArts);
+            var albumitems = db.Albums.OrderBy(i => i.name).Include(i => i.AlbumArts);
             return View(albumitems.ToList());
         }
 

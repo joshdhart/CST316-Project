@@ -17,7 +17,8 @@ namespace MusicLibrary.Controllers
         // GET: /Artist/
         public ActionResult Index()
         {
-            return View(db.Artists.ToList());
+            var albumitems = db.Albums.OrderBy(i => i.Artist.name).ThenBy(i => i.name).Include(i => i.AlbumArts);
+            return View(albumitems.ToList());
         }
 
         // GET: /Artist/Details/5

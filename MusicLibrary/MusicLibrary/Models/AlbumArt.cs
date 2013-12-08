@@ -6,6 +6,8 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicLibrary.Models
 {
@@ -16,6 +18,7 @@ namespace MusicLibrary.Models
     {
         public int albumArtID { get; set; }
         public Nullable<int> albumID { get; set; }
+        [DisplayName("Album Cover")]
         public string url { get; set; }
     
         public virtual Album Album { get; set; }

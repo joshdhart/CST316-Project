@@ -17,9 +17,8 @@ namespace MusicLibrary.Controllers
         // GET: /Album/
         public ActionResult Index()
         {
-            var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre).Include(a => a.AlbumArts);
-
-            return View(albums.ToList());
+            var albumitems = db.Albums.OrderBy(i => i.name).Include(i => i.AlbumArts);
+            return View(albumitems.ToList());
         }
 
         // GET: /Album/Details/5
@@ -133,5 +132,6 @@ namespace MusicLibrary.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

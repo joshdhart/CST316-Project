@@ -17,7 +17,7 @@ namespace MusicLibrary.Controllers
         // GET: /Song/
         public ActionResult Index()
         {
-            var songs = db.Songs.Include(s => s.Album).Include(s => s.Artist).Include(s => s.Genre);
+            var songs = db.Songs.OrderBy(s => s.title).Include(s => s.Album).Include(s => s.Artist).Include(s => s.Genre).Include(s => s.Album.AlbumArts).Include(s => s.Playlist);
             return View(songs.ToList());
         }
 

@@ -1,33 +1,69 @@
-﻿@model IEnumerable<MusicLibrary.Models.Artist>
+﻿@model IEnumerable<MusicLibrary.Models.Album>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Artist Page";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h1>my music</h1>
+    <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active">@Html.ActionLink("artist", "Index", "Artist")</li>
+            <li>@Html.ActionLink("album", "Index", "Home")</li>
+            <li>@Html.ActionLink("song", "Index", "Song")</li>
+            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
+        </ul>
+    </div>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th></th>
-    </tr>
+<div class="btn-group btn-group-justified">
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.artistID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.artistID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.artistID })
-        </td>
-    </tr>
-}
+    <a class="btn btn-default btn-xs" role="button">a</a>
+    <a class="btn btn-default btn-xs" role="button">b</a>
+    <a class="btn btn-default btn-xs" role="button">c</a>
+    <a class="btn btn-default btn-xs" role="button">d</a>
+    <a class="btn btn-default btn-xs" role="button">e</a>
+    <a class="btn btn-default btn-xs" role="button">f</a>
+    <a class="btn btn-default btn-xs" role="button">g</a>
+    <a class="btn btn-default btn-xs" role="button">h</a>
+    <a class="btn btn-default btn-xs" role="button">i</a>
+    <a class="btn btn-default btn-xs" role="button">j</a>
+    <a class="btn btn-default btn-xs" role="button">k</a>
+    <a class="btn btn-default btn-xs" role="button">l</a>
+    <a class="btn btn-default btn-xs" role="button">m</a>
+    <a class="btn btn-default btn-xs" role="button">n</a>
+    <a class="btn btn-default btn-xs" role="button">o</a>
+    <a class="btn btn-default btn-xs" role="button">p</a>
+    <a class="btn btn-default btn-xs" role="button">q</a>
+    <a class="btn btn-default btn-xs" role="button">r</a>
+    <a class="btn btn-default btn-xs" role="button">s</a>
+    <a class="btn btn-default btn-xs" role="button">t</a>
+    <a class="btn btn-default btn-xs" role="button">u</a>
+    <a class="btn btn-default btn-xs" role="button">v</a>
+    <a class="btn btn-default btn-xs" role="button">w</a>
+    <a class="btn btn-default btn-xs" role="button">x</a>
+    <a class="btn btn-default btn-xs" role="button">y</a>
+    <a class="btn btn-default btn-xs" role="button">z</a>
+    <a class="btn btn-default btn-xs" role="button">#</a>
 
-</table>
+</div>
+
+
+<div class="row">
+
+    @foreach (var album in Model)
+    {
+        <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
+                    <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
+                    <div class="caption">
+                        <h4>@Html.DisplayFor(modelItem => album.name)</h4>
+                        <p>@Html.DisplayFor(model => album.Artist.name)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+
+</div>

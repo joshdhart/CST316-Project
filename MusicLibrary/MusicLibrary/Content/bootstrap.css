@@ -4951,8 +4951,7 @@ a.list-group-item.active > .badge,
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
-  color: #000000;
-  background-color: #eeeeee;
+  color: #ffffff;
 }
 
 .jumbotron h1 {
@@ -4978,7 +4977,8 @@ a.list-group-item.active > .badge,
     padding-left: 60px;
   }
   .jumbotron h1 {
-    font-size: 63px;
+    font-size: 90px;
+    padding-bottom: 12px;
   }
 }
 
@@ -4987,9 +4987,10 @@ a.list-group-item.active > .badge,
   display: block;
   height: auto;
   max-width: 100%;
+  margin: 10px;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #282A2B;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -5013,8 +5014,7 @@ a.thumbnail:focus {
 }
 
 .thumbnail .caption {
-  padding: 9px;
-  color: #333333;
+  padding: 2px;
 }
 
 .alert {

@@ -23,18 +23,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("my music", "Index", "Home")</li>
-                    <li>@Html.ActionLink("make a playlist", "About", "Home")</li>
-                    <li>@Html.ActionLink("music store", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("my playlist", "Index", "Playlist")</li>
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
     <div class="container body-content">
+        
         @RenderBody()
         <hr />
     </div>
-    <footer class="footer-fixed-bottom">
+    <footer>
         <div class="container">
             <p>&copy; 2013 - CST 316 - Team Project Prototype Application</p>
             <p>Project Team: Josh Hartwell, Patrick Jarofski, Chase Marcum, John Price, Jordan Ringo</p>

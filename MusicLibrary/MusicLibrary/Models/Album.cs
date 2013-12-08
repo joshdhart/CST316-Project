@@ -6,6 +6,8 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicLibrary.Models
 {
@@ -21,9 +23,11 @@ namespace MusicLibrary.Models
         }
     
         public int albumID { get; set; }
+        [DisplayName("Album Title")]
         public string name { get; set; }
         public Nullable<int> artistID { get; set; }
         public Nullable<int> genreID { get; set; }
+        [DisplayName("Year Released")]
         public Nullable<int> releaseYear { get; set; }
     
         public virtual Artist Artist { get; set; }

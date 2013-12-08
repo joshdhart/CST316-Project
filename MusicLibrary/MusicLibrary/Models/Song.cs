@@ -6,6 +6,8 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicLibrary.Models
 {
@@ -15,11 +17,14 @@ namespace MusicLibrary.Models
     public partial class Song
     {
         public int songID { get; set; }
+        [DisplayName("Song Title")]
         public string title { get; set; }
         public Nullable<int> artistID { get; set; }
         public Nullable<int> genreID { get; set; }
         public Nullable<int> albumID { get; set; }
+        [DisplayName("Release Year")]
         public Nullable<int> releaseYear { get; set; }
+        [DisplayName("Track #")]
         public Nullable<int> trackNum { get; set; }
         public string Playlist_playlistID { get; set; }
     
