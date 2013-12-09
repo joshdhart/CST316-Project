@@ -16,82 +16,430 @@
     </div>
 </div>
 
-    @*<table>
-            <thead>
-                <tr>
-                    <th scope="col">
-                        <a href="/?sort=artistID&amp;sortdir=ASC">Artist  </a>
-                    </th>
-                    <th scope="col">
-                        <a href="/?sort=ReleaseDate&amp;sortdir=ASC">B</a>
-                    </th>
-                    <th scope="col">
-                        <a href="/?sort=Genre&amp;sortdir=ASC">C</a>
-                    </th>
-                    <th scope="col">
-                        <a href="/?sort=Rating&amp;sortdir=DESC">D</a>
-                    </th>
-                    <th scope="col">
-                        <a href="/?sort=MovieDirector.DirectorName&amp;sortdir=ASC">E</a>
-                    </th>
-                    <th scope="col">
-                        <a href="/?sort=MovieDirector.DirectorBirthdate&amp;sortdir=ASC">F</a>
-                    </th>
-                    <th scope="col">
-                        Actions
-                    </th>
-                </tr>
-            </thead>
-        </table>*@
-
 <div class="btn-group btn-group-justified">
 
-    <a class="btn btn-default btn-xs" role="button">a</a>
-    <a class="btn btn-default btn-xs" role="button">b</a>
-    <a class="btn btn-default btn-xs" role="button">c</a>
-    <a class="btn btn-default btn-xs" role="button">d</a>
-    <a class="btn btn-default btn-xs" role="button">e</a>
-    <a class="btn btn-default btn-xs" role="button">f</a>
-    <a class="btn btn-default btn-xs" role="button">g</a>
-    <a class="btn btn-default btn-xs" role="button">h</a>
-    <a class="btn btn-default btn-xs" role="button">i</a>
-    <a class="btn btn-default btn-xs" role="button">j</a>
-    <a class="btn btn-default btn-xs" role="button">k</a>
-    <a class="btn btn-default btn-xs" role="button">l</a>
-    <a class="btn btn-default btn-xs" role="button">m</a>
-    <a class="btn btn-default btn-xs" role="button">n</a>
-    <a class="btn btn-default btn-xs" role="button">o</a>
-    <a class="btn btn-default btn-xs" role="button">p</a>
-    <a class="btn btn-default btn-xs" role="button">q</a>
-    <a class="btn btn-default btn-xs" role="button">r</a>
-    <a class="btn btn-default btn-xs" role="button">s</a>
-    <a class="btn btn-default btn-xs" role="button">t</a>
-    <a class="btn btn-default btn-xs" role="button">u</a>
-    <a class="btn btn-default btn-xs" role="button">v</a>
-    <a class="btn btn-default btn-xs" role="button">w</a>
-    <a class="btn btn-default btn-xs" role="button">x</a>
-    <a class="btn btn-default btn-xs" role="button">y</a>
-    <a class="btn btn-default btn-xs" role="button">z</a>
-    <a class="btn btn-default btn-xs" role="button">#</a>
+    <a class="btn btn-default btn-xs" role="button" href="#A">a</a>
+    <a class="btn btn-default btn-xs" role="button" href="#B">b</a>
+    <a class="btn btn-default btn-xs" role="button" href="#C">c</a>
+    <a class="btn btn-default btn-xs" role="button" href="#D">d</a>
+    <a class="btn btn-default btn-xs" role="button" href="#E">e</a>
+    <a class="btn btn-default btn-xs" role="button" href="#F">f</a>
+    <a class="btn btn-default btn-xs" role="button" href="#G">g</a>
+    <a class="btn btn-default btn-xs" role="button" href="#H">h</a>
+    <a class="btn btn-default btn-xs" role="button" href="#I">i</a>
+    <a class="btn btn-default btn-xs" role="button" href="#J">j</a>
+    <a class="btn btn-default btn-xs" role="button" href="#K">k</a>
+    <a class="btn btn-default btn-xs" role="button" href="#L">l</a>
+    <a class="btn btn-default btn-xs" role="button" href="#M">m</a>
+    <a class="btn btn-default btn-xs" role="button" href="#N">n</a>
+    <a class="btn btn-default btn-xs" role="button" href="#O">o</a>
+    <a class="btn btn-default btn-xs" role="button" href="#P">p</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Q">q</a>
+    <a class="btn btn-default btn-xs" role="button" href="#R">r</a>
+    <a class="btn btn-default btn-xs" role="button" href="#S">s</a>
+    <a class="btn btn-default btn-xs" role="button" href="#T">t</a>
+    <a class="btn btn-default btn-xs" role="button" href="#U">u</a>
+    <a class="btn btn-default btn-xs" role="button" href="#V">v</a>
+    <a class="btn btn-default btn-xs" role="button" href="#W">w</a>
+    <a class="btn btn-default btn-xs" role="button" href="#X">x</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Y">y</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Z">z</a>
 
 </div>
 
 
 <div class="row">
 
-    @foreach (var album in Model)
-    {
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
-                    <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
-                    <div class="caption">
-                        <h4>@Html.DisplayFor(modelItem => album.name)</h4>
-                        <p>@Html.DisplayFor(model => album.Artist.name)</p>
-                </div>
-            </a>
-        </div>
-    </div>
-    }
+    @{
+        bool firstA = true;
+        bool firstB = true;
+        bool firstC = true;
+        bool firstD = true;
+        bool firstE = true;
+        bool firstF = true;
+        bool firstG = true;
+        bool firstH = true;
+        bool firstI = true;
+        bool firstJ = true;
+        bool firstK = true;
+        bool firstL = true;
+        bool firstM = true;
+        bool firstN = true;
+        bool firstO = true;
+        bool firstP = true;
+        bool firstQ = true;
+        bool firstR = true;
+        bool firstS = true;
+        bool firstT = true;
+        bool firstU = true;
+        bool firstV = true;
+        bool firstW = true;
+        bool firstX = true;
+        bool firstY = true;
+        bool firstZ = true;
 
+
+        foreach (var album in Model)
+        {
+
+
+            switch (album.name[0])
+            {
+                case 'A':
+                    if (firstA)
+                    {
+                        <a name="A"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/A_Tile.png" />
+                            </div>
+                        </div>
+                        firstA = false;
+
+                    }
+                    break;
+                case 'B':
+                    if (firstB)
+                    {
+                        <a name="B"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/B_Tile.png" />
+                            </div>
+                        </div>
+                        firstB = false;
+
+                    }
+                    break;
+                case 'C':
+                    if (firstC)
+                    {
+                        <a name="C"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/C_Tile.png" />
+                            </div>
+                        </div>
+                        firstC = false;
+
+                    }
+                    break;
+                case 'D':
+                    if (firstD)
+                    {
+                        <a name="D"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/D_Tile.png" />
+                            </div>
+                        </div>
+                        firstD = false;
+
+                    }
+                    break;
+                case 'E':
+                    if (firstE)
+                    {
+                        <a name="E"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/E_Tile.png" />
+                            </div>
+                        </div>
+                        firstE = false;
+
+                    }
+                    break;
+                case 'F':
+                    if (firstF)
+                    {
+                        <a name="F"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/F_Tile.png" />
+                            </div>
+                        </div>
+                        firstF = false;
+
+                    }
+                    break;
+                case 'G':
+                    if (firstG)
+                    {
+                        <a name="G"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/G_Tile.png" />
+                            </div>
+                        </div>
+                        firstG = false;
+
+                    }
+                    break;
+                case 'H':
+                    if (firstH)
+                    {
+                        <a name="H"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/H_Tile.png" />
+                            </div>
+                        </div>
+                        firstH = false;
+
+                    }
+                    break;
+                case 'I':
+                    if (firstI)
+                    {
+                        <a name="I"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/I_Tile.png" />
+                            </div>
+                        </div>
+                        firstI = false;
+
+                    }
+                    break;
+                case 'J':
+                    if (firstJ)
+                    {
+                        <a name="J"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/J_Tile.png" />
+                            </div>
+                        </div>
+                        firstJ = false;
+
+                    }
+                    break;
+                case 'K':
+                    if (firstK)
+                    {
+                        <a name="K"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/K_Tile.png" />
+                            </div>
+                        </div>
+                        firstK = false;
+
+                    }
+                    break;
+                case 'L':
+                    if (firstL)
+                    {
+                        <a name="L"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/L_Tile.png" />
+                            </div>
+                        </div>
+                        firstL = false;
+
+                    }
+                    break;
+                case 'M':
+                    if (firstM)
+                    {
+                        <a name="M"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/M_Tile.png" />
+                            </div>
+                        </div>
+                        firstM = false;
+
+                    }
+                    break;
+                case 'N':
+                    if (firstN)
+                    {
+                        <a name="N"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/N_Tile.png" />
+                            </div>
+                        </div>
+                        firstN = false;
+
+                    }
+                    break;
+                case 'O':
+                    if (firstO)
+                    {
+                        <a name="O"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/O_Tile.png" />
+                            </div>
+                        </div>
+                        firstO = false;
+
+                    }
+                    break;
+                case 'P':
+                    if (firstP)
+                    {
+                        <a name="P"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/P_Tile.png" />
+                            </div>
+                        </div>
+                        firstP = false;
+
+                    }
+                    break;
+                case 'Q':
+                    if (firstQ)
+                    {
+                        <a name="Q"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/Q_Tile.png" />
+                            </div>
+                        </div>
+                        firstQ = false;
+
+                    }
+                    break;
+                case 'R':
+                    if (firstR)
+                    {
+                        <a name="R"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/R_Tile.png" />
+                            </div>
+                        </div>
+                        firstR = false;
+
+                    }
+                    break;
+                case 'S':
+                    if (firstS)
+                    {
+                        <a name="S"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/S_Tile.png" />
+                            </div>
+                        </div>
+                        firstS = false;
+
+                    }
+                    break;
+                case 'T':
+                    if (firstT)
+                    {
+                        <a name="T"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/T_Tile.png" />
+                            </div>
+                        </div>
+                        firstT = false;
+
+                    }
+                    break;
+                case 'U':
+                    if (firstU)
+                    {
+                        <a name="U"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/U_Tile.png" />
+                            </div>
+                        </div>
+                        firstU = false;
+
+                    }
+                    break;
+                case 'V':
+                    if (firstV)
+                    {
+                        <a name="V"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/V_Tile.png" />
+                            </div>
+                        </div>
+                        firstV = false;
+
+                    }
+                    break;
+                case 'W':
+                    if (firstW)
+                    {
+                        <a name="W"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/W_Tile.png" />
+                            </div>
+                        </div>
+                        firstW = false;
+
+                    }
+                    break;
+                case 'X':
+                    if (firstX)
+                    {
+                        <a name="X"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/X_Tile.png" />
+                            </div>
+                        </div>
+                        firstX = false;
+
+                    }
+                    break;
+                case 'Y':
+                    if (firstY)
+                    {
+                        <a name="Y"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/Y_Tile.png" />
+                            </div>
+                        </div>
+                        firstY = false;
+
+                    }
+                    break;
+                case 'Z':
+                    if (firstZ)
+                    {
+                        <a name="Z"></a>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/Z_Tile.png" />
+                            </div>
+                        </div>
+                        firstZ = false;
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
+                        <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
+                        <div class="caption">
+                            <h4>@Html.DisplayFor(modelItem => album.name)</h4>
+                            <p>@Html.DisplayFor(model => album.Artist.name)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    }
 </div>

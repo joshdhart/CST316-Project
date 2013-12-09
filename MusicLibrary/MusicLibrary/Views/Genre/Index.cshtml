@@ -51,20 +51,97 @@
 
 <div class="row">
 
-    @foreach (var album in Model)
-    {
-        <div class="col-sm-6 col-md-3">
-            <div class="thumbnail">
-                <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
-                    <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
-                    <div class="caption">
-                        <h4>@Html.DisplayFor(modelItem => album.name)</h4>
-                        <p>@Html.DisplayFor(model => album.Artist.name)</p>
-                        <p>@Html.DisplayFor(model => album.Genre.type)</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    }
+    @{
+        bool firstCountry = true;
+        bool firstElectronic = true;
+        bool firstMetal = true;
+        bool firstPop = true;
+        bool firstRock = true;
 
+
+        foreach (var album in Model)
+        {
+
+
+            switch (album.Genre.type)
+            {
+                case "Country":
+                    if (firstCountry)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/A_Tile.png" />
+                            </div>
+                        </div>
+                        firstCountry = false;
+
+                    }
+                    break;
+                case "Electronic":
+                    if (firstElectronic)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/B_Tile.png" />
+                            </div>
+                        </div>
+                        firstElectronic = false;
+
+                    }
+                    break;
+                case "Metal":
+                    if (firstMetal)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/C_Tile.png" />
+                            </div>
+                        </div>
+                        firstMetal = false;
+
+                    }
+                    break;
+                case "Pop":
+                    if (firstPop)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/D_Tile.png" />
+                            </div>
+                        </div>
+                        firstPop = false;
+
+                    }
+                    break;
+                case "Rock":
+                    if (firstRock)
+                    {
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img class="thumbnail" src="~/img/Letter_Tiles/E_Tile.png" />
+                            </div>
+                        </div>
+                        firstRock = false;
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+
+
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
+                        <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
+                        <div class="caption">
+                            <h4>@Html.DisplayFor(modelItem => album.name)</h4>
+                            <p>@Html.DisplayFor(model => album.Artist.name)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    }
 </div>
