@@ -4,75 +4,55 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h1>Album Title - @Html.DisplayFor(model => model.name)</h1>
 
 <div class="row">
-    <div class="col-md-6">
-        <div class="thumbnail">
-            <img alt="@Model.name" src="@Model.AlbumArts.First().url" />
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="thumbnail" style="height:auto">
+            <img class="img-thumbnail" alt="@Model.name" src="@Model.AlbumArts.First().url" />
         </div>
     </div>
 
     <div class="col-lg-6 col-md-6 col-sm-6">
-        <div>
-            <div>
-            <h1>@Html.DisplayFor(model => model.name)</h1>
-                <div>
-                    @foreach (var song in Model.Songs)
-                    {
-                    <ul>
-                        <li>
-                            @Html.DisplayFor(model => song.title)
-                        </li>
-                    </ul>
-                    }
-                </div>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().trackNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().releaseYear)
+                </th>
+                <th></th>
+            </tr>
 
-        </div>
+            @foreach (var item in Model.Songs)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.trackNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.releaseYear)
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-default">
+                            <strong>
+                                @Html.ActionLink("+", "Index", "Playlist")
+                            </strong>
+                        </button>
+                    </td>
+                </tr>
+
+
+            }
+
+        </table>
     </div>
 </div>
-</div>
-
-
-@*<div>
-    <h4>Album</h4>
-	<hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.releaseYear)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.releaseYear)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Artist.name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Artist.name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Genre.type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Genre.type)
-        </dd>
-
-    </dl>
-</div>*@
-@*<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.albumID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>*@

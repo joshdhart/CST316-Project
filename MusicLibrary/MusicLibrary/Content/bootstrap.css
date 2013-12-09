@@ -4997,6 +4997,11 @@ a.list-group-item.active > .badge,
           transition: all 0.2s ease-in-out;
 }
 
+.albumDetail {
+    height: auto;
+    max-width: 100%;
+}
+
 .thumbnail > img {
   display: block;
   height: auto;
