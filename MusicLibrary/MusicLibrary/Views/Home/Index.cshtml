@@ -430,8 +430,8 @@
 
 
             <div class="col-sm-6 col-md-3">
-                <div class="thumbnail">
-                    <a href="@Url.Action("Details", "Album", new { id = album.albumID })">
+                <div>
+                    <a class="thumbnail" href="@Url.Action("Details", "Album", new { id = album.albumID })">
                         <img class="img-thumbnail" alt="@album.name" src="@album.AlbumArts.First().url" />
                         <div class="caption">
                             <h4>@Html.DisplayFor(modelItem => album.name)</h4>

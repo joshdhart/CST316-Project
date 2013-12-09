@@ -2040,7 +2040,7 @@ textarea.input-lg {
 
 .btn:hover,
 .btn:focus {
-  color: #333333;
+  border:solid 2px #428bca;
   text-decoration: none;
 }
 
@@ -2076,7 +2076,7 @@ fieldset[disabled] .btn {
 .open .dropdown-toggle.btn-default {
   color: #333333;
   background-color: #ebebeb;
-  border-color: #adadad;
+  border:solid 2px #428bca;
 }
 
 .btn-default:active,
@@ -5008,9 +5008,14 @@ a.list-group-item.active > .badge,
   max-width: 100%;
 }
 
+a img:hover, 
+a img:focus {
+    border:solid 2px #428bca;
+}
+
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #428bca;
+  border:solid 2px #428bca;
 }
 
 .thumbnail > img {
