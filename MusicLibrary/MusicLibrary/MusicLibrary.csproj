@@ -284,6 +284,11 @@
     <Content Include="img\Letter_Tiles\F_Tile.png" />
     <Content Include="img\Letter_Tiles\G_Tile.png" />
     <Content Include="img\Letter_Tiles\H_Tile.png" />
+    <Content Include="img\Letter_Tiles\IconCOUNTRY.png" />
+    <Content Include="img\Letter_Tiles\IconMETAL.png" />
+    <Content Include="img\Letter_Tiles\IconPOP.png" />
+    <Content Include="img\Letter_Tiles\IconROCK.png" />
+    <Content Include="img\Letter_Tiles\IconTECHNO.png" />
     <Content Include="img\Letter_Tiles\I_Tile.png" />
     <Content Include="img\Letter_Tiles\J_Tile.png" />
     <Content Include="img\Letter_Tiles\K_Tile.png" />
