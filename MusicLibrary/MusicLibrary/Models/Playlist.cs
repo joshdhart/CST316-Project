@@ -25,6 +25,7 @@ namespace MusicLibrary.Models
         [DisplayName("Playlist")]
         public string playlistName { get; set; }
         public Nullable<int> songID { get; set; }
+        public int count { get; set; }
     
         public virtual ICollection<Song> Songs { get; set; }
     }

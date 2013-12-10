@@ -21,7 +21,8 @@ namespace MusicLibrary.Models
             this.AlbumArts = new HashSet<AlbumArt>();
             this.Songs = new HashSet<Song>();
         }
-    
+        
+        [ScaffoldColumn(false)]
         public int albumID { get; set; }
         [DisplayName("Album Title")]
         public string name { get; set; }
