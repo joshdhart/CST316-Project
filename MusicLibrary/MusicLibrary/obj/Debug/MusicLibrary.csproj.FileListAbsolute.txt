@@ -217,3 +217,4 @@ C:\Users\Chase\Dropbox\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.Goo
 C:\Users\Chase\Dropbox\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Chase\Dropbox\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Chase\Dropbox\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.pdb
+C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.csprojResolveAssemblyReference.cache

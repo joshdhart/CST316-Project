@@ -24,7 +24,7 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/
         public ActionResult Playlist()
         {
-            var songs = db.Songs.Include(s => s.Album).Include(s => s.Artist).Include(s => s.Genre).Include(s => s.Album.AlbumArts).Include(s => s.Playlist);
+            var songs = db.Songs.Where(s => s.Playlist_playlistID == "1").Include(s => s.Album).Include(s => s.Artist).Include(s => s.Genre).Include(s => s.Album.AlbumArts).Include(s => s.Playlist);
             return View(songs.ToList());
         }
 
