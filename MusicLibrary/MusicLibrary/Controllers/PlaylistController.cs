@@ -17,8 +17,7 @@ namespace MusicLibrary.Controllers
         // GET: /Playlist/
         public ActionResult Index()
         {
-            var playlist = db.Playlists.Include(s => s.Songs);
-            return View(playlist.ToList());
+            return View(db.Playlists.ToList());
         }
 
         // GET: /Playlist/Details/5

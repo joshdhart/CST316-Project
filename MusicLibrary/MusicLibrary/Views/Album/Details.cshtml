@@ -25,7 +25,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Songs.First().releaseYear)
                 </th>
-                <th></th>
+                <th>
+                    Add to Playlist
+                </th>
             </tr>
 
             @foreach (var item in Model.Songs)
@@ -42,16 +44,12 @@
                         @Html.DisplayFor(modelItem => item.releaseYear)
                     </td>
                     <td>
-                        <button type="button" class="btn btn-default">
+                        <a class="btn btn-default" href="@Url.Action("AddToPlaylist", "Song", new { id = item.songID })">
                             <span class="glyphicon glyphicon-plus"></span>
-                            @Html.ActionLink(" ", "Index", "Playlist")
-                        </button>
+                        </a>
                     </td>
                 </tr>
-
-
             }
-
         </table>
     </div>
 </div>

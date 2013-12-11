@@ -105,7 +105,6 @@ C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\Mic
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.dll
 C:\Users\Chase\Documents\GitHub\CST316-Project\MusicLibrary\MusicLibrary\obj\Debug\MusicLibrary.pdb
 C:\Users\Chase\Desktop\MusicLibrary\MusicLibrary\bin\MusicLibrary.dll.config

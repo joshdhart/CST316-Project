@@ -21,6 +21,13 @@ namespace MusicLibrary.Controllers
             return View(songs.ToList());
         }
 
+        // GET: /Playlist/
+        public ActionResult Playlist()
+        {
+            var songs = db.Songs.Include(s => s.Album).Include(s => s.Artist).Include(s => s.Genre).Include(s => s.Album.AlbumArts).Include(s => s.Playlist);
+            return View(songs.ToList());
+        }
+
         // GET: /Song/Details/5
         public ActionResult Details(int? id)
         {
@@ -42,6 +49,7 @@ namespace MusicLibrary.Controllers
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name");
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name");
             ViewBag.genreID = new SelectList(db.Genres, "genreID", "type");
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName");
             return View();
         }
 
@@ -50,7 +58,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="songID,title,artistID,genreID,albumID,releaseYear,trackNum")] Song song)
+        public ActionResult Create([Bind(Include="songID,title,artistID,genreID,albumID,releaseYear,trackNum,Playlist_playlistID")] Song song)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +70,7 @@ namespace MusicLibrary.Controllers
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
             ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
             return View(song);
         }
 
@@ -80,6 +89,7 @@ namespace MusicLibrary.Controllers
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
             ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
             return View(song);
         }
 
@@ -88,7 +98,7 @@ namespace MusicLibrary.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="songID,title,artistID,genreID,albumID,releaseYear,trackNum")] Song song)
+        public ActionResult Edit([Bind(Include="songID,title,artistID,genreID,albumID,releaseYear,trackNum,Playlist_playlistID")] Song song)
         {
             if (ModelState.IsValid)
             {
@@ -99,6 +109,7 @@ namespace MusicLibrary.Controllers
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
             ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
             return View(song);
         }
 
@@ -136,5 +147,45 @@ namespace MusicLibrary.Controllers
             }
             base.Dispose(disposing);
         }
+
+        // GET: /Song/AddToPlaylist/5
+        public ActionResult AddToPlaylist(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Song song = db.Songs.Find(id);
+            if (song == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
+            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
+            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
+            return View(song);
+        }
+
+        // POST: /Song/AddToPlaylist/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddToPlaylist([Bind(Include = "songID,title,artistID,genreID,albumID,releaseYear,trackNum,Playlist_playlistID")] Song song)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(song).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
+            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
+            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
+            return View(song);
+        }
+
     }
 }

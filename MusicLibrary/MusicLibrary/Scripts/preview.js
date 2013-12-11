@@ -76,7 +76,7 @@
 	    $submitButton.click(function () {
 	        $container.undoChanges()
 					  .setGridSize($gridCol.val(), $gridRow.val())
-					  .setNoCategory($categories.filter(":checked").val() == "no")
+					  .setNoCategory($categories.filter(":checked").val() === "no")
 					  .setLinkType($linkType.val())
 					  .setOverlayDir($panelDir.val())
 					  .setEffect($effects.val())
@@ -102,11 +102,11 @@
 	    });
 
 	    $linkType.change(function () {
-	        $panelDir.attr("disabled", $(this).val() != "panel");
+	        $panelDir.attr("disabled", $(this).val() !== "panel");
 	    });
 
 	    $capPos.change(function () {
-	        var disable = $(this).val() == "outside";
+	        var disable = $(this).val() === "outside";
 	        $mouseCapCB.attr("disabled", disable);
 	        $capEffects.attr("disabled", disable || !$mouseCapCB.prop("checked"));
 	        $("label#mouse-cap-label").toggleClass("disable", disable);
@@ -147,12 +147,12 @@
 	        $capPos.val("inside");
 	        $capEffects.val("fade").attr("disabled", false);
 	        $("label#num-label,label#mouse-cap-label,label#mouse-dbtns-label").removeClass("disable");
-	    }
+	    };
 
 	    var setLightbox = function () {
-	        if ($linkType.val() == "lightbox") {
+	        if ($linkType.val() === "lightbox") {
 	            var $links = $container.find("a");
-	            if ($categories.filter(":checked").val() == "no") {
+	            if ($categories.filter(":checked").val() === "no") {
 	                $links.attr("rel", "all");
 	            }
 	            else {
@@ -174,7 +174,7 @@
 	                auto_fit: true
 	            });
 	        }
-	    }
+	    };
 
 	    var setPanelWidth = function () {
 	        var width = $container.find(">div").outerWidth();
@@ -184,7 +184,7 @@
 	        $panel.css({ width: width, marginLeft: -width / 2 });
 	        $infoSection.width(width - infoPad);
 	        $desc.width($infoSection.width() - descPad - formWidth);
-	    }
+	    };
 
 	    init();
 	}

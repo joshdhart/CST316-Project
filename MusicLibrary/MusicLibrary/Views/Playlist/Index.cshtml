@@ -4,72 +4,36 @@
     ViewBag.Title = "Index";
 }
 
-<div class="jumbotron">
-    <h1>my music</h1>
-    <div>
-        <ul class="nav nav-tabs nav-justified">
-            <li>@Html.ActionLink("artist", "Index", "Artist")</li>
-            <li>@Html.ActionLink("album", "Index", "Home")</li>
-            <li>@Html.ActionLink("song", "Index", "Song")</li>
-            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
-        </ul>
-    </div>
-</div>
+<h2>Index</h2>
 
-<h1>@Html.DisplayFor(model => model.First().playlistName)</h1>
-
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().Album.AlbumArts.First().url)
+            @Html.DisplayNameFor(model => model.playlistName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().title)
+            @Html.DisplayNameFor(model => model.songID)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().trackNum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().Album.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().Artist.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().releaseYear)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.First().Songs.First().Genre.type)
-        </th>
+        <th></th>
     </tr>
-    @foreach (var item in Model.First().Songs)
-    {
-        <tr>
-            <td>
-                <a href="@Url.Action("Details", "Album", new { id = item.Album.albumID })">
-                    <img alt="item.Album.name" height="50" width="50" src="@item.Album.AlbumArts.First().url" />
-                </a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.trackNum)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Album.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Artist.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.releaseYear)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre.type)
-            </td>
-        </tr>
-    }
 
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.playlistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.songID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.playlistID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.playlistID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.playlistID })
+        </td>
+    </tr>
+}
 
 </table>

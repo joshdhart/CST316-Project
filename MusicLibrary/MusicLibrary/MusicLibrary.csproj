@@ -448,17 +448,19 @@
     <Content Include="Views\Genre\Details.cshtml" />
     <Content Include="Views\Genre\Edit.cshtml" />
     <Content Include="Views\Genre\Index.cshtml" />
-    <Content Include="Views\Song\Create.cshtml" />
-    <Content Include="Views\Song\Delete.cshtml" />
-    <Content Include="Views\Song\Details.cshtml" />
-    <Content Include="Views\Song\Edit.cshtml" />
-    <Content Include="Views\Song\Index.cshtml" />
+    <Content Include="Views\Index.cshtml" />
     <Content Include="Views\Playlist\Create.cshtml" />
     <Content Include="Views\Playlist\Delete.cshtml" />
     <Content Include="Views\Playlist\Details.cshtml" />
     <Content Include="Views\Playlist\Edit.cshtml" />
     <Content Include="Views\Playlist\Index.cshtml" />
-    <Content Include="Views\Index.cshtml" />
+    <Content Include="Views\Song\Create.cshtml" />
+    <Content Include="Views\Song\Delete.cshtml" />
+    <Content Include="Views\Song\Details.cshtml" />
+    <Content Include="Views\Song\Edit.cshtml" />
+    <Content Include="Views\Song\Index.cshtml" />
+    <Content Include="Views\Song\AddToPlaylist.cshtml" />
+    <Content Include="Views\Song\Playlist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

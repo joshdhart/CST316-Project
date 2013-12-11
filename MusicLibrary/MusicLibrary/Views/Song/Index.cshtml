@@ -71,7 +71,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Genre.type)
         </th>
-        <th></th>
+        <th>
+            Add to Playlist
+        </th>
     </tr>
     @{
         bool firstA = true;
@@ -118,6 +120,7 @@
 
         foreach (var item in Model)
         {
+
             switch (item.title[0])
             {
                 case 'A':
@@ -696,10 +699,9 @@
                     @Html.DisplayFor(modelItem => item.Genre.type)
                 </td>
                 <td>
-                    <button type="button" class="btn btn-default">
+                    <a class="btn btn-default" href="@Url.Action("AddToPlaylist", "Song", new { id = item.songID })">
                         <span class="glyphicon glyphicon-plus"></span>
-                        @Html.ActionLink(" ", "AddToCart", "PlaylistCart")
-                    </button>
+                    </a>
                 </td>
             </tr>
         }

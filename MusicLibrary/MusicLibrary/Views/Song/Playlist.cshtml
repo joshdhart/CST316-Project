@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MusicLibrary.Models.Song>
+
+@{
+    ViewBag.Title = "Playlist";
+}
+
+<div class="jumbotron">
+    <h1>my playlist</h1>
+    <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li>@Html.ActionLink("artist", "Index", "Artist")</li>
+            <li>@Html.ActionLink("album", "Index", "Home")</li>
+            <li>@Html.ActionLink("song", "Index", "Song")</li>
+            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
+        </ul>
+    </div>
+</div>
+
+<h1>@Html.DisplayFor(model => model.First().Playlist.playlistName)</h1>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.AlbumArts.First().url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trackNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.releaseYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.type)
+        </th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                <a href="@Url.Action("Details", "Album", new { id = item.Album.albumID })">
+                    <img alt="item.Album.name" height="50" width="50" src="@item.Album.AlbumArts.First().url" />
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trackNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Album.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Artist.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.releaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre.type)
+            </td>
+        </tr>
+    }
+
+
+</table>
