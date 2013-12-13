@@ -1,0 +1,710 @@
+﻿@model IEnumerable<MusicLibrary.Models.Song>
+
+@{
+    ViewBag.Title = "Song";
+}
+
+<div class="jumbotron">
+    <h1>my music</h1>
+    <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li>@Html.ActionLink("artist", "Index", "Artist")</li>
+            <li>@Html.ActionLink("album", "Index", "Home")</li>
+            <li class="active">@Html.ActionLink("song", "Index", "Song")</li>
+            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
+        </ul>
+    </div>
+</div>
+
+<div class="btn-group btn-group-justified">
+
+    <a class="btn btn-default btn-xs" role="button" href="#Num">#</a>
+    <a class="btn btn-default btn-xs" role="button" href="#A">a</a>
+    <a class="btn btn-default btn-xs" role="button" href="#B">b</a>
+    <a class="btn btn-default btn-xs" role="button" href="#C">c</a>
+    <a class="btn btn-default btn-xs" role="button" href="#D">d</a>
+    <a class="btn btn-default btn-xs" role="button" href="#E">e</a>
+    <a class="btn btn-default btn-xs" role="button" href="#F">f</a>
+    <a class="btn btn-default btn-xs" role="button" href="#G">g</a>
+    <a class="btn btn-default btn-xs" role="button" href="#H">h</a>
+    <a class="btn btn-default btn-xs" role="button" href="#I">i</a>
+    <a class="btn btn-default btn-xs" role="button" href="#J">j</a>
+    <a class="btn btn-default btn-xs" role="button" href="#K">k</a>
+    <a class="btn btn-default btn-xs" role="button" href="#L">l</a>
+    <a class="btn btn-default btn-xs" role="button" href="#M">m</a>
+    <a class="btn btn-default btn-xs" role="button" href="#N">n</a>
+    <a class="btn btn-default btn-xs" role="button" href="#O">o</a>
+    <a class="btn btn-default btn-xs" role="button" href="#P">p</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Q">q</a>
+    <a class="btn btn-default btn-xs" role="button" href="#R">r</a>
+    <a class="btn btn-default btn-xs" role="button" href="#S">s</a>
+    <a class="btn btn-default btn-xs" role="button" href="#T">t</a>
+    <a class="btn btn-default btn-xs" role="button" href="#U">u</a>
+    <a class="btn btn-default btn-xs" role="button" href="#V">v</a>
+    <a class="btn btn-default btn-xs" role="button" href="#W">w</a>
+    <a class="btn btn-default btn-xs" role="button" href="#X">x</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Y">y</a>
+    <a class="btn btn-default btn-xs" role="button" href="#Z">z</a>
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.AlbumArts.First().url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trackNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Album.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.releaseYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.type)
+        </th>
+        <th>
+            Add to Playlist
+        </th>
+    </tr>
+    @{
+        bool firstA = true;
+        bool firstB = true;
+        bool firstC = true;
+        bool firstD = true;
+        bool firstE = true;
+        bool firstF = true;
+        bool firstG = true;
+        bool firstH = true;
+        bool firstI = true;
+        bool firstJ = true;
+        bool firstK = true;
+        bool firstL = true;
+        bool firstM = true;
+        bool firstN = true;
+        bool firstO = true;
+        bool firstP = true;
+        bool firstQ = true;
+        bool firstR = true;
+        bool firstS = true;
+        bool firstT = true;
+        bool firstU = true;
+        bool firstV = true;
+        bool firstW = true;
+        bool firstX = true;
+        bool firstY = true;
+        bool firstZ = true;
+
+        <tr>
+            <td>
+                <a name="Num">
+                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/Number_Tile.png" />
+                </a>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        foreach (var item in Model)
+        {
+
+            switch (item.title[0])
+            {
+                case 'A':
+                    if (firstA)
+                    {
+
+                        <tr>
+                            <td>
+                                <a name="A">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/A_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstA = false;
+
+                    }
+                    break;
+                case 'B':
+                    if (firstB)
+                    {
+                        <tr>
+                            <td>
+                                <a name="B">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/B_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstB = false;
+
+                    }
+                    break;
+                case 'C':
+                    if (firstC)
+                    {
+                        <tr>
+                            <td>
+                                <a name="C">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/C_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstC = false;
+
+                    }
+                    break;
+                case 'D':
+                    if (firstD)
+                    {
+                        <tr>
+                            <td>
+                                <a name="D">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/D_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstD = false;
+
+                    }
+                    break;
+                case 'E':
+                    if (firstE)
+                    {
+                        <tr>
+                            <td>
+                                <a name="E">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/E_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstE = false;
+
+                    }
+                    break;
+                case 'F':
+                    if (firstF)
+                    {
+                        <tr>
+                            <td>
+                                <a name="F">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/F_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstF = false;
+
+                    }
+                    break;
+                case 'G':
+                    if (firstG)
+                    {
+                        <tr>
+                            <td>
+                                <a name="G">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/G_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstG = false;
+
+                    }
+                    break;
+                case 'H':
+                    if (firstH)
+                    {
+                        <tr>
+                            <td>
+                                <a name="H">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/H_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstH = false;
+
+                    }
+                    break;
+                case 'I':
+                    if (firstI)
+                    {
+                        <tr>
+                            <td>
+                                <a name="I">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/I_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstI = false;
+
+                    }
+                    break;
+                case 'J':
+                    if (firstJ)
+                    {
+                        <tr>
+                            <td>
+                                <a name="J">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/J_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstJ = false;
+
+                    }
+                    break;
+                case 'K':
+                    if (firstK)
+                    {
+                        <tr>
+                            <td>
+                                <a name="K">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/K_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstK = false;
+
+                    }
+                    break;
+                case 'L':
+                    if (firstL)
+                    {
+                        <tr>
+                            <td>
+                                <a name="L">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/L_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstL = false;
+
+                    }
+                    break;
+                case 'M':
+                    if (firstM)
+                    {
+                        <tr>
+                            <td>
+                                <a name="M">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/M_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstM = false;
+
+                    }
+                    break;
+                case 'N':
+                    if (firstN)
+                    {
+                        <tr>
+                            <td>
+                                <a name="N">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/N_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstN = false;
+
+                    }
+                    break;
+                case 'O':
+                    if (firstO)
+                    {
+                        <tr>
+                            <td>
+                                <a name="O">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/O_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstO = false;
+
+                    }
+                    break;
+                case 'P':
+                    if (firstP)
+                    {
+                        <tr>
+                            <td>
+                                <a name="P">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/P_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstP = false;
+
+                    }
+                    break;
+                case 'Q':
+                    if (firstQ)
+                    {
+                        <tr>
+                            <td>
+                                <a name="Q">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/Q_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstQ = false;
+
+                    }
+                    break;
+                case 'R':
+                    if (firstR)
+                    {
+                        <tr>
+                            <td>
+                                <a name="R">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/R_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstR = false;
+
+                    }
+                    break;
+                case 'S':
+                    if (firstS)
+                    {
+                        <tr>
+                            <td>
+                                <a name="S">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/S_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstS = false;
+
+                    }
+                    break;
+                case 'T':
+                    if (firstT)
+                    {
+                        <tr>
+                            <td>
+                                <a name="T">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/T_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstT = false;
+
+                    }
+                    break;
+                case 'U':
+                    if (firstU)
+                    {
+                        <tr>
+                            <td>
+                                <a name="U">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/U_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstU = false;
+
+                    }
+                    break;
+                case 'V':
+                    if (firstV)
+                    {
+                        <tr>
+                            <td>
+                                <a name="V">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/V_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstV = false;
+
+                    }
+                    break;
+                case 'W':
+                    if (firstW)
+                    {
+                        <tr>
+                            <td>
+                                <a name="W">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/W_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstW = false;
+
+                    }
+                    break;
+                case 'X':
+                    if (firstX)
+                    {
+                        <tr>
+                            <td>
+                                <a name="X">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/X_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstX = false;
+
+                    }
+                    break;
+                case 'Y':
+                    if (firstY)
+                    {
+                        <tr>
+                            <td>
+                                <a name="Y">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/Y_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstY = false;
+
+                    }
+                    break;
+                case 'Z':
+                    if (firstZ)
+                    {
+                        <tr>
+                            <td>
+                                <a name="Z">
+                                    <img alt="Placeholder letter" height="50" width="50" src="~/img/Letter_Tiles/Z_Tile.png" />
+                                </a>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        firstZ = false;
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            <tr>
+                <td>
+                    <a href="@Url.Action("Details", "Album", new { id = item.Album.albumID })">
+                        <img alt="item.Album.name" height="50" width="50" src="@item.Album.AlbumArts.First().url" />
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.trackNum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Album.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.releaseYear)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.type)
+                </td>
+                <td>
+                    <a class="btn btn-default" href="@Url.Action("AddToPlaylist", "Song", new { id = item.songID })">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+    }
+
+</table>

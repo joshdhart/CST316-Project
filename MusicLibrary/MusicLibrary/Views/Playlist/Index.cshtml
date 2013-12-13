@@ -20,20 +20,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.playlistName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.songID)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.playlistID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.playlistID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.playlistID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.playlistName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.songID)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.playlistID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.playlistID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.playlistID })
+            </td>
+        </tr>
+    }
 
 </table>

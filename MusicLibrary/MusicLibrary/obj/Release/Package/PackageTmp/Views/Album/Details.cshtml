@@ -1,0 +1,55 @@
+﻿@model MusicLibrary.Models.Album
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Album Title - @Html.DisplayFor(model => model.name)</h1>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="thumbnail" style="height:auto">
+            <img class="img-thumbnail" alt="@Model.name" src="@Model.AlbumArts.First().url" />
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().trackNum)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Songs.First().releaseYear)
+                </th>
+                <th>
+                    Add to Playlist
+                </th>
+            </tr>
+
+            @foreach (var item in Model.Songs)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.trackNum)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.releaseYear)
+                    </td>
+                    <td>
+                        <a class="btn btn-default" href="@Url.Action("AddToPlaylist", "Song", new { id = item.songID })">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

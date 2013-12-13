@@ -166,7 +166,6 @@
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlaylistCartController.cs" />
     <Compile Include="Controllers\PlaylistController.cs" />
     <Compile Include="Controllers\SongController.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,7 +208,6 @@
     <Compile Include="Models\Playlist.cs">
       <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PlaylistCart.cs" />
     <Compile Include="Models\Song.cs">
       <DependentUpon>MusicLibrayDBModel.tt</DependentUpon>
     </Compile>
@@ -240,7 +238,7 @@
     <Content Include="img\AlbumArt\Country\Learn to Live.jpg" />
     <Content Include="img\AlbumArt\Country\My Kinda Party.jpg" />
     <Content Include="img\AlbumArt\Country\Some Hearts.jpg" />
-    <Content Include="img\AlbumArt\Metal\Dream Theater Black Clouds and Silver Linings.jpg" />
+    <Content Include="img\AlbumArt\Metal\Black Clouds and Silver Linings.jpg" />
     <Content Include="img\AlbumArt\Metal\John Petrucci Suspended Animation.png" />
     <Content Include="img\AlbumArt\Metal\Megadeth Peace Sells But Whos Buying.jpg" />
     <Content Include="img\AlbumArt\Metal\Metallica Master of Puppets.jpg" />
@@ -384,6 +382,7 @@
       <DependentUpon>MusicLibrayDBModel.edmx</DependentUpon>
     </Content>
     <Content Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\musicplaylist.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -461,10 +460,10 @@
     <Content Include="Views\Song\Index.cshtml" />
     <Content Include="Views\Song\AddToPlaylist.cshtml" />
     <Content Include="Views\Song\Playlist.cshtml" />
+    <Content Include="Views\Song\RemoveFromPlaylist.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\PlaylistCart\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

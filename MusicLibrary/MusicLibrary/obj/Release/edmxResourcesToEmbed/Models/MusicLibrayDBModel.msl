@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MusicLibraryDBModelStoreContainer" CdmEntityContainer="MusicLibraryDBEntities">
+    <EntitySetMapping Name="Albums">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.Album)">
+        <MappingFragment StoreEntitySet="Albums">
+          <ScalarProperty Name="albumID" ColumnName="albumID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="genreID" ColumnName="genreID" />
+          <ScalarProperty Name="releaseYear" ColumnName="releaseYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlbumArts">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.AlbumArt)">
+        <MappingFragment StoreEntitySet="AlbumArts">
+          <ScalarProperty Name="albumArtID" ColumnName="albumArtID" />
+          <ScalarProperty Name="albumID" ColumnName="albumID" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Artists">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.Artist)">
+        <MappingFragment StoreEntitySet="Artists">
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.Genre)">
+        <MappingFragment StoreEntitySet="Genres">
+          <ScalarProperty Name="genreID" ColumnName="genreID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Playlists">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.Playlist)">
+        <MappingFragment StoreEntitySet="Playlists">
+          <ScalarProperty Name="playlistID" ColumnName="playlistID" />
+          <ScalarProperty Name="playlistName" ColumnName="playlistName" />
+          <ScalarProperty Name="songID" ColumnName="songID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Songs">
+      <EntityTypeMapping TypeName="IsTypeOf(MusicLibraryDBModel.Song)">
+        <MappingFragment StoreEntitySet="Songs">
+          <ScalarProperty Name="songID" ColumnName="songID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="genreID" ColumnName="genreID" />
+          <ScalarProperty Name="albumID" ColumnName="albumID" />
+          <ScalarProperty Name="releaseYear" ColumnName="releaseYear" />
+          <ScalarProperty Name="trackNum" ColumnName="trackNum" />
+          <ScalarProperty Name="Playlist_playlistID" ColumnName="Playlist_playlistID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

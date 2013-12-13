@@ -1,0 +1,162 @@
+﻿@model MusicLibrary.Models.Song
+
+@{
+    ViewBag.Title = "Remove SongFrom Playlist";
+}
+
+<div class="jumbotron">
+    <h1>my music</h1>
+    <div>
+        <ul class="nav nav-tabs nav-justified">
+            <li>@Html.ActionLink("artist", "Index", "Artist")</li>
+            <li>@Html.ActionLink("album", "Index", "Home")</li>
+            <li>@Html.ActionLink("song", "Index", "Song")</li>
+            <li>@Html.ActionLink("genre", "Index", "Genre")</li>
+        </ul>
+    </div>
+</div>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.songID)
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Album.AlbumArts.First().url)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trackNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.releaseYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre.type)
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <a href="@Url.Action("Details", "Album", new { id = Model.albumID })">
+                    <img alt="model.Album.name" height="50" width="50" src="@Model.Album.AlbumArts.First().url" />
+                </a>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.trackNum)
+                @Html.ValidationMessageFor(model => model.trackNum)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Album.name)
+                @Html.ValidationMessageFor(model => model.Album.name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Artist.name)
+                @Html.ValidationMessageFor(model => model.Artist.name)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.releaseYear)
+                @Html.ValidationMessageFor(model => model.releaseYear)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Genre.type)
+                @Html.ValidationMessageFor(model => model.Genre.type)
+            </td>
+        </tr>
+    </table>
+
+    <div class="form-horizontal">
+        <hr />
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.songID)
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title)
+                @Html.ValidationMessageFor(model => model.title)
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.artistID, "artistID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("artistID", String.Empty)
+                @Html.ValidationMessageFor(model => model.artistID)
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.genreID, "genreID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("genreID", String.Empty)
+                @Html.ValidationMessageFor(model => model.genreID)
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.albumID, "albumID", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("albumID", String.Empty)
+                @Html.ValidationMessageFor(model => model.albumID)
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.releaseYear, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.releaseYear)
+                @Html.ValidationMessageFor(model => model.releaseYear)
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.trackNum, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trackNum)
+                @Html.ValidationMessageFor(model => model.trackNum)
+            </div>
+        </div>
+
+        <div class="form-group" hidden>
+            @Html.LabelFor(model => model.Playlist_playlistID, "Choose Playlist to add song to:", new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+
+                @Html.DropDownList("Playlist_playlistID", String.Empty)
+                @Html.ValidationMessageFor(model => model.Playlist_playlistID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <input type="submit" value="Remove from Playlist" class="btn btn-block btn-danger" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

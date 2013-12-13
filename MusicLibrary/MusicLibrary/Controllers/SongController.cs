@@ -160,6 +160,7 @@ namespace MusicLibrary.Controllers
             {
                 return HttpNotFound();
             }
+            song.Playlist_playlistID = "1";
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
             ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
@@ -178,7 +179,47 @@ namespace MusicLibrary.Controllers
             {
                 db.Entry(song).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Playlist");
+            }
+            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
+            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
+            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
+            return View(song);
+        }
+
+        // GET: /Song/RemoveFromPlaylist/5
+        public ActionResult RemoveFromPlaylist(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Song song = db.Songs.Find(id);
+            if (song == null)
+            {
+                return HttpNotFound();
+            }
+            song.Playlist_playlistID = null;
+            ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
+            ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
+            ViewBag.genreID = new SelectList(db.Genres, "genreID", "type", song.genreID);
+            ViewBag.Playlist_playlistID = new SelectList(db.Playlists, "playlistID", "playlistName", song.Playlist_playlistID);
+            return View(song);
+        }
+
+        // POST: /Song/RemoveFromPlaylist/5
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RemoveFromPlaylist([Bind(Include = "songID,title,artistID,genreID,albumID,releaseYear,trackNum,Playlist_playlistID")] Song song)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(song).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Playlist");
             }
             ViewBag.albumID = new SelectList(db.Albums, "albumID", "name", song.albumID);
             ViewBag.artistID = new SelectList(db.Artists, "artistID", "name", song.artistID);
