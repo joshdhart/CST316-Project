@@ -382,6 +382,8 @@
       <DependentUpon>MusicLibrayDBModel.edmx</DependentUpon>
     </Content>
     <Content Include="ClassDiagram1.cd" />
+    <None Include="Properties\PublishProfiles\musiclibrary.pubxml" />
+    <None Include="Properties\PublishProfiles\musiclibraryproject.pubxml" />
     <None Include="Properties\PublishProfiles\musicplaylist.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
